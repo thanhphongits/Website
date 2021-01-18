@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PMP Musical | Quản lý tài khoản</title>
+    <link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-user.css">
+    <link rel="icon" href="../image/logo.png">
+</head>
+
+<body>
+    <!--Bat dau header-->
+    <header id="header">
+        <!--Bat dau header top-->
+        <div class="headerTop">
+            <div class="container">
+                <img src="../image/phone-icon.svg" alt="phone" style="width:1%;">
+                <span style="font-style: italic;">Hotline:</span>
+                <span style="font-weight: bold; color: red;">0980.262.203 (Hà Nội)</span>
+                <span style="font-weight: bold; color: red;">0569.230.562 (Hồ Chí Minh)</span>
+            </div>
+        </div>
+        <!--Ket thuc header top-->
+        <!--Bat dau header mid-->
+        <div class="headerMid">
+            <div class="container">
+                <div class="headerMid-logo">
+                    <a href="../index-user.html" title="Trang chủ">
+                        <img src="../image/logo.png" alt="logo">
+                    </a>
+                </div>
+                <form class="headerMid-search">
+                    <input type="search" placeholder="Bạn muốn tìm gì..." aria-label="Search" name="search" id="getIn">
+                    <button type="button" value="search" id="getBut"><img src="../image/search-icon.svg" alt="search" style="width:100%; text-align: center;" onclick="timkiem();"></button>
+                </form>
+                <div class="headerMid-notify">
+                    <!--Đăng nhập, đăng ký, giỏ hàng-->
+                    <ul>
+                        <li class="login">
+                            <a href="../user/index.html"><span><img src="../image/user-circle-solid.svg"></span>Quản lý tài khoản</a>
+                        </li>
+                        <li class="shopping-cart">
+                            <a href="../shoppingcart.html"><span><img src="../image/shopping-cart-icon.svg" title="Giỏ hàng" alt="shopping-cart-icon"></span>Giỏ hàng</a>
+                        </li>
+                        <li class="logout" style="margin-left: 20px;">
+                            <a href="../index.html"><span ><img src="../image/sign-out-alt-solid.svg" title="Đăng xuất">Đăng xuất</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--Ket thuc header mid-->
+    </header>
+    <!--Ket thuc header-->
+    <!--Bat dau navbar-->
+    <nav class="navigation">
+        <ul>
+            <li>
+                <a href="../guitar.html">
+                    <span>
+                  <img src="../image/guitar-icon.png" alt="guitar-icon"/>
+                </span> GUITAR
+                </a>
+            </li>
+            <li>
+                <a href="../piano-organ.html">
+                    <span>
+                  <img src="../image/piano-icon.png" alt="piano-icon"/>
+                </span> PIANO | ORGAN
+                </a>
+            </li>
+            <li>
+                <a href="../ukulele.html">
+                    <span>
+                  <img src="../image/ukulele-icon.png" alt="ukulele-icon"/>
+                </span> Ukulele
+                </a>
+            </li>
+            <li>
+                <a href="../nhac-cu-khac.html">
+                    <span>
+                  <img src="../image/nhac-cu-khac-icon.png" alt="drum-icon"/>
+                </span> Nhạc cụ khác
+                </a>
+            </li>
+            <li>
+                <a href="../khoa-hoc.html">
+                    <span>
+                  <img src="../image/khoa-hoc-icon.svg" alt="khoa-hoc-icon"/>
+                </span> KHÓA HỌC
+                </a>
+            </li>
+            <li>
+                <a href="../sach-phu-kien.html">
+                    <span>
+                  <img src="../image/phu-kien-icon.png" alt="phu-kien-icon"/>
+                </span> SÁCH | PHỤ KIỆN
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--Ket thuc navbar-->
+
+    <div class="Wrapper" style="background: #f4f4f4;">
+        <div class="text-lien-ket">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="../index-user.html">Trang chủ</a>&nbsp;
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="index.html">Thông tin tài khoản</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="menu-left">
+                <div class="profiles">
+                    <p class="image"><img src="../image/user-circle-solid.svg"></p>
+                    <p class="name">Tài khoản của</p>
+                    <h6>Nguyễn Thương Mến</h6>
+                </div>
+
+                <div class="menu-dropdown">
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="index.html"><img src="../image/user-login-icon.svg" width="13px;">Thông tin tài khoản</a>
+                        </li>
+                        <li class="active">
+                            <a href="QuanLyDonHang.html"><img src="../image/clipboard-list-solid.svg" width="13px;">Quản lý đơn hàng</a>
+                        </li>
+                        <li>
+                            <a href="QuanLySoDiaChi.html"><img src="../image/map-marker-alt-solid.svg" width="13px;">Quản lý sổ địa chỉ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content-right">
+            <h1>Đơn hàng của tôi</h1>
+            <div class="content-main">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã đơn hàng</th>
+                            <th>Ngày mua</th>
+                            <th>Sản phẩm</th>
+                            <th>Tổng tiền</th>
+                            <th>Trạng thái đơn hàng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">305099035</a></td>
+                            <td>27/11/2019</td>
+                            <td>Đàn Guitar Acoustic Hohner SD65TBK</td>
+                            <td>4.950.000 VND</td>
+                            <td>Giao hàng thành công</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">305099035</a></td>
+                            <td>10/11/2019</td>
+                            <td>Đàn Ukulele Lanikai LU23 (Full Solid)</td>
+                            <td>1.050.000 VND</td>
+                            <td>Giao hàng thành công</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">305099035</a></td>
+                            <td>15/9/2019</td>
+                            <td>Máy Lên Dây Đàn Guitar Stagg</td>
+                            <td>150.000 VND</td>
+                            <td>Đã hủy</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">305099035</a></td>
+                            <td>10/07/2019</td>
+                            <td>Đàn Guitar Điện Stagg GE-S250SB</td>
+                            <td>2.350.000 VND</td>
+                            <td>Giao hàng thành công</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--Bắt đầu Footer-->
+    <footer id="footer" style="margin-top: -40px;">
+        <div class="container">
+            <ul>
+                <li class="footer1">
+                    <div class="heading">Chính sách</div>
+                    <div class="content-footer">
+                        <ul>
+                            <li><a href="#" rel="nofollow">Chính sách giao hàng</a></li>
+                            <li><a href="#" rel="nofollow">Chính sách bảo hành & đổi trả</a></li>
+                            <li><a href="#" rel="nofollow">Chính sách thanh toán</a></li>
+                            <li><a href="#" rel="nofollow">Chính sách bảo mật thông tin</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="footer1">
+                    <div class="heading">Dịch vụ & hỗ trợ</div>
+                    <div class="content-footer">
+                        <ul>
+                            <li><a href="#" rel="nofollow">An toàn mua bán</a></li>
+                            <li><a href="#" rel="nofollow">Đăng ký cộng tác viên</a></li>
+                            <li><a href="#" rel="nofollow">Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="footer1">
+                    <div class="heading">Thông tin liên hệ</div>
+                    <div class="content-footer">
+                        <div class="social-media">
+                            <a href="#" class="button-facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="button-ggplus"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="button-youtube"><i class="fa fa-youtube"></i></a>
+                        </div>
+                        <span style="font-weight: bold; color: red;">0980.262.203 (Hà Nội)</span>
+                        <span style="font-weight: bold; color: red;">0569.230.562 (Hồ Chí Minh)</span>
+                    </div>
+                </li>
+
+                <li class="footer1">
+                    <div class="heading">Góp ý, phản ánh</div>
+                    <div class="content-footer">
+                        <span style="font-weight: bold; color: red;">0980.262.203 (Hà Nội)</span>
+                        <span style="font-weight: bold; color: red;">0569.230.562 (Hồ Chí Minh)</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Text cuối-->
+    </footer>
+    <!--Kết thúc Footer-->
+
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+
+</html>

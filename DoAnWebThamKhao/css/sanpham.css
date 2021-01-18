@@ -1,0 +1,259 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	text-decoration: none;
+	padding: 0px;
+	margin: 0px;
+	border: 0px; 
+}
+
+/*=======================================phần nội dung=============================================*/
+
+#content{
+/*	margin-top: 150px;*/
+	margin-top: 0px;
+	width: 100%;
+	height: 500px;
+	float:left;
+}
+/*======================================= Phần danh mục============================================*/
+#danh_muc{
+	float: left;
+	width: 26%;
+	height: 500px;
+}
+
+#_danh_muc{
+	float: left;
+	margin-left: 15%;
+	margin-top: 40px;
+	font-size: 197%;
+	border-bottom: 3px solid black;
+}
+
+#list{
+	float: left;
+	width: 85%;
+	margin-left: 15%;
+	margin-top: 2%;
+	font-size: 100%;
+	font-size: 100%;
+	cursor: pointer;
+}
+
+#list img{
+	width: 100%;
+	padding-bottom:0%;
+	margin-top: 10%;
+	height: 100%;
+}
+
+.chu1{
+	width: 100%;
+	height: 20px;
+	float: left;
+	overflow: hidden;
+}
+
+.chu1:hover{
+	color: red;
+}
+
+.chu2{
+	width: 90%;
+	height: 20px;
+	float: left;
+	margin-left: 10%;
+	display: none;
+	overflow: hidden;
+}
+
+.chu2:hover{
+	color: red;
+}
+
+.chu3{
+	width: 80%;
+	height: 20px;
+	float: right;
+	display: none;
+	overflow: hidden;
+}
+
+.chu3:hover{
+	color: red;
+}
+
+.icon_1{
+	float: left;
+	width: 7%;
+	height: 16px;
+}
+
+/*======================================= Phần sản phẩm============================================*/
+
+#san_pham{
+	float: left;
+	height: 1110px;
+	overflow: hidden;
+	width: 74%;
+}
+
+#hien_sp{
+	float: left;
+	width: 100%;
+	margin-top: 35px;
+	font-size: 200%;
+	text-align: center;
+}
+
+#list_sp{
+	float: left;
+	width: 100%;
+}
+
+.khung_sp{
+	float: left;
+	margin-left: 1.5px;
+	margin-right: 1.5px;
+	margin-bottom: 1px;
+	width: 24.5%;
+	height: 297px;
+	cursor: pointer;
+	overflow: hidden;
+	background-color: #e4e4dd;
+	position: relative;
+}
+
+.khung_sp:hover{
+/*	border: 1px solid #716d6d;*/
+	box-shadow: 0px 0px 12px;
+	transition: 0.2s;
+}
+
+.khung_sp img{
+	padding-top: 3%;
+	width: 99.1%;
+	height: 50%;
+}
+
+.san_pham_phan_chu{
+	margin: 5%;
+	margin-top: 2%;
+	width: 95%;
+	height: 50%;
+	padding-bottom:3%;
+}
+
+.san_pham_phan_chu > p{
+	margin-top: 1.5%;
+}
+
+.sanpham_icon_them{
+	right: 0%;
+	top: 0%;
+	height: 30px;
+	width: 12%;
+	background-color: none;
+	position: absolute;
+	cursor: pointer;
+}
+
+.sanpham_icon_them:hover{
+	box-shadow: 0px 0px 12px;
+}
+
+.sanpham_icon_them img{
+	width: 100%;
+	height: 100%;
+}
+
+#phan_trang_sp{
+	margin-top: 0.5%;
+	float: left;
+	width: 63%;
+	height: 80px;
+	margin-left: 18%;
+}
+
+.sanpham_icon{
+	width: 14%;
+	height: 12%;
+}
+
+#phan_trang_sp div{
+	padding-top: 1%;
+	text-align: center;
+	float: left;
+	width: 8%;
+	height: 25px;
+	border-radius: 3px;
+	background-color: #b7b7a7;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+#phan_trang_sp div:hover{
+	background-color: red;
+}
+
+
+#index_footer{
+	width: 100%;
+	height: 400px;
+	float: left;
+	margin-top:2%;
+	background-color: black;
+	color: #bbbbbb;
+}
+
+#index_footer_SATISFY{
+	float: left;
+	width: 25%;
+	height: 75%;
+	margin-left: 10%;
+	margin-top: 2.5%;
+	/*background-color: violet;*/
+}
+
+#index_footer_SATISFY_name > a{
+	color:#bbbbbb;
+	text-decoration: none;
+}
+
+#index_footer_SATISFY_name{
+	float: left;
+	width: 90%;
+	height: 80px;
+	font-size: 300%;
+	font-weight: bold;
+	overflow: hidden;
+/*	background-color: #7e7abb;*/
+}
+
+.index_footer_danhmuc{
+	float: left;
+	width: 25%;
+	height: 75%;
+	margin-top: 2.5%;
+	margin-left: 2.5%;
+}
+
+.index_footer_danhmuc_ds{
+	float: left;
+	width: 100%;
+	height: 64px;
+	font-size: 150%;
+	font-weight: bold;
+	padding-top: 6%;
+	overflow: hidden;
+}
+
+#index_footer_info{
+	float: left;
+	width: 25%;
+	height: 75%;
+	margin-top: 2.5%;
+	margin-left: 2.5%;
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PMP Musical | Hóa đơn</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+    <link rel="icon" href="image/logo.png">
+</head>
+
+<body>
+    <!--Bat dau header-->
+    <header id="header">
+        <!--Bat dau header top-->
+        <div class="headerTop">
+            <div class="container">
+                <img src="image/phone-icon.svg" alt="phone" style="width:1%;">
+                <span style="font-style: italic;">Hotline:</span>
+                <span style="font-weight: bold; color: red;">0980.262.203 (Hà Nội)</span>
+                <span style="font-weight: bold; color: red;">0569.230.562 (Hồ Chí Minh)</span>
+            </div>
+        </div>
+        <!--Ket thuc header top-->
+        <!--Bat dau header mid-->
+        <div class="headerMid">
+            <div class="container">
+                <div class="headerMid-logo">
+                    <a href="index-user.html" title="Trang chủ">
+                        <img src="image/logo.png" alt="logo">
+                    </a>
+                </div>
+                <form class="headerMid-search">
+                    <input type="search" placeholder="Bạn muốn tìm gì..." aria-label="Search" name="search" id="getIn">
+                    <button type="button" value="search" id="getBut"><img src="image/search-icon.svg" alt="search" style="width:100%; text-align: center;" onclick="timkiem()"></button>
+                </form>
+                <div class="headerMid-notify">
+                    <!--Đăng nhập, đăng ký, giỏ hàng-->
+                    <ul>
+                        <li class="login">
+                            <a href="user/index.html"><span><img src="image/user-circle-solid.svg"></span>Quản lý tài khoản</a>
+                        </li>
+                        <li class="shopping-cart">
+                            <a href="shoppingcart-user.html"><span><img src="image/shopping-cart-icon.svg" title="Giỏ hàng" alt="shopping-cart-icon"></span>Giỏ hàng</a>
+                        </li>
+                        <li class="logout" style="margin-left: 20px;">
+                            <a href="index.html"><span style="margin-top: 24px;margin-left: 1px;"><img src="image/sign-out-alt-solid.svg" width="20px;" title="Đăng xuất">Đăng xuất</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--Ket thuc header mid-->
+    </header>
+    <!--Ket thuc header-->
+    <!--Bat dau navbar-->
+    <div class="menu">
+        <nav class="navigation">
+            <ul>
+                <li>
+                    <a href="guitar-user.html">
+                        <span>
+                <img src="image/guitar-icon.png" alt="guitar-icon"/>
+              </span> GUITAR
+                    </a>
+                </li>
+                <li>
+                    <a href="piano-organ-user.html">
+                        <span>
+                <img src="image/piano-icon.png" alt="piano-icon"/>
+              </span> PIANO | ORGAN
+                    </a>
+                </li>
+                <li>
+                    <a href="ukulele-user.html">
+                        <span>
+                <img src="image/ukulele-icon.png" alt="ukulele-icon"/>
+              </span> Ukulele
+                    </a>
+                </li>
+                <li>
+                    <a href="nhac-cu-khac-user.html">
+                        <span>
+                <img src="image/nhac-cu-khac-icon.png" alt="drum-icon"/>
+              </span> Nhạc cụ khác
+                    </a>
+                </li>
+                <li>
+                    <a href="khoa-hoc-user.html">
+                        <span>
+                <img src="image/khoa-hoc-icon.svg" alt="khoa-hoc-icon"/>
+              </span> KHÓA HỌC
+                    </a>
+                </li>
+                <li>
+                    <a href="sach-phu-kien-user.html">
+                        <span>
+                <img src="image/phu-kien-icon.png" alt="phu-kien-icon"/>
+              </span> SÁCH | PHỤ KIỆN
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--Ket thuc navbar-->
+    <!--Bat dau Content main-->
+    <br><br><br><br>
+    <div class="note">
+        <span style="color: #008fd5;">
+        <a href="index-user.html">Trang chủ&nbsp;</a>
+        <i class="fa fa-angle-right"></i>
+        <a href="shoppingcart-user.html">&nbsp;Giỏ hàng&nbsp;</a>
+        <i class="fa fa-angle-right"></i>
+        <a href="checkout-shoppingcart.html">Thanh toán</a>
+        <i class="fa fa-angle-right"></i>
+        <a href="#">&nbsp;Hóa đơn&nbsp;</a>
+        <br><br>
+      </span>
+        <h3 style="font-size: 1.2rem; font-weight: 500; margin: 0;">THÔNG TIN HÓA ĐƠN</h3>
+    </div>
+    <div class="hoa-don">
+        <div class="container">
+            <h3>Cảm ơn quý khách đã đặt hàng tại PMP Musical</h3><br>
+            <span class="tieu-de"><span class="ma-don-hang">THÔNG TIN ĐƠN HÀNG #305099035 </span>(Ngày 12 Tháng 09 Năm 2019 21:40:01)</span><br>
+            <br>
+            <hr style="width:67%;margin-left: 24%;">
+            <ul>
+                <li>
+                    <b>Thông tin thanh toán</b><br><br>
+                    <p>Nguyễn Thương Mến</p>
+                    <p>abc@gmail.com</p>
+                    <p>0901667314</p>
+                </li>
+                <li>
+                    <b>Địa chỉ giao hàng</b><br><br>
+                    <p>Nguyễn Thương Mến</p>
+                    <p>273 An Dương Vương, Phường 3, Quận 5, <br> Hồ Chí Minh, Việt Nam</p>
+                    <p>0901667314</p>
+                </li>
+            </ul>
+            <div class="phuong-thuc">
+                <p><span><strong>Phương thức thanh toán:</strong> Thanh toán tiền mặt khi nhận hàng</span></p>
+                <p><span><strong>Phời gian giao hàng dự kiến:</strong> Dự kiến giao hàng Thứ tư, 18/09/2019</span></p>
+                <p><span><strong>Phí vận chuyển:</strong> 0 VNĐ</span></p>
+            </div>
+            <span class="chi-tiet-don-hang">CHI TIẾT ĐƠN HÀNG</span>
+            <table class="tab-san-pham">
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Đàn Guitar Acoustic Hohner SD65TBK</td>
+                        <td>4.950.000 VNĐ</td>
+                        <td>1</td>
+                        <td>4.950.000 VNĐ</td>
+                    </tr>
+                    <tr>
+                        <td>Đàn Organ Kurtzman K200</td>
+                        <td>3.800.000 VNĐ</td>
+                        <td>1</td>
+                        <td>3.800.000 VNĐ</td>
+                    </tr>
+                    <tr>
+                        <td>Đàn Ukulele Lanikai LU23</td>
+                        <td>1.050.000 VNĐ</td>
+                        <td>1</td>
+                        <td>1.050.000 VNĐ</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><b style="font-size: 18px;">Tổng giá trị đơn hàng</b></td>
+                        <td><b style="font-size: 18px;">9.800.000 VNĐ</b></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="btn-xac-nhan">
+                <input type="button" value="HỦY" class="huy-bo" onclick="btnHuyBo()">
+                <input type="button" value="XÁC NHẬN THANH TOÁN" class="xac-nhan" onclick="btnXacNhan()">
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--Bắt đầu Footer-->
+    <footer id="footer">
+        <div class="container">
+            <ul>
+                <li class="footer1">
+                    <div class="heading">Chính sách</div>
+                    <div class="content-footer">
+                        <ul>
+                            <li><a href="#" rel="nofollow">Chính sách giao hàng</a></li>
+                            <li><a href="#" rel="nofollow">Chính sách bảo hành & đổi trả</a></li>
+                            <li><a href="#" rel="nofollow">Chính sách thanh toán</a></li>
+                            <li><a href="#" rel="nofollow">Chính sách bảo mật thông tin</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="footer1">
+                    <div class="heading">Dịch vụ & hỗ trợ</div>
+                    <div class="content-footer">
+                        <ul>
+                            <li><a href="#" rel="nofollow">An toàn mua bán</a></li>
+                            <li><a href="#" rel="nofollow">Đăng ký cộng tác viên</a></li>
+                            <li><a href="#" rel="nofollow">Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="footer1">
+                    <div class="heading">Thông tin liên hệ</div>
+                    <div class="content-footer">
+                        <div class="social-media">
+                            <a href="#" class="button-facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="button-ggplus"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="button-youtube"><i class="fa fa-youtube"></i></a>
+                        </div>
+                        <span style="font-weight: bold; color: red;">0980.262.203 (Hà Nội)</span>
+                        <span style="font-weight: bold; color: red;">0569.230.562 (Hồ Chí Minh)</span>
+                    </div>
+                </li>
+
+                <li class="footer1">
+                    <div class="heading">Góp ý, phản ánh</div>
+                    <div class="content-footer">
+                        <span style="font-weight: bold; color: red;">0980.262.203 (Hà Nội)</span>
+                        <span style="font-weight: bold; color: red;">0569.230.562 (Hồ Chí Minh)</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Text cuối-->
+    </footer>
+    <!--Kết thúc Footer-->
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+</body>
+
+</html>

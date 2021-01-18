@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>SATISFY - Mỹ phẩm làm đẹp</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/user.css">
+		<link rel="stylesheet" href="css/chung.css">
+		<link href="fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet" />
+		<script src="js/index.js"></script>
+	</head>
+	<body id ="body">
+		<div id ="user_main">
+			<!--================================= phần head ===================================-->
+			<div id="head">
+				<table id="image-phone">
+						<td><img src="icon/phone4.png" class="image-head"></td>
+						<td>0364117408</td>
+				</table>
+
+				<table id ="image-sale">
+					<td><img src="icon/sale4.png" class="image-head"></td>
+					<td>Giảm giá</td>
+				</table>
+
+				<table id ="image-car">
+					<td><img src="icon/order.png" class="image-head"></td>
+					<td>Kiểm tra đơn hàng</td>
+				</table>
+			</div>
+
+			<!--=============================================phần head-link==================================-->
+			<div id="head-link">
+				<div id="head-link-tren">
+					<a href="index.html" id ="satisfy">SATISFY</a>
+					<form name="thanh-tim-kiem" method="post" action="" enctype="multipart/form-data" id="form_tim_kiem">
+						<input type="text" name = "search1" id="search1" placeholder="Tìm kiếm : halio, okame..." class="input">
+						<button type="button" onClick="addSearch()" id="button1"><img id = "img-search1" src="icon/search2.png"></button>
+					</form>
+					<pre id="dang-nhap"><span name="#" onClick="show_Login()">Đăng nhập</span>/<span name="#" onClick="show_signup()">Đăng kí</span></pre>
+					<!--==============tạo phần hiển thị khách hàng============================ -->
+					<ul id="hien-thi-kh">
+						<p id="member" onclick="to_user()">Nguyễn Ngọc Thiện</p>
+						<ul>
+					<!--		<li name="#">Tài khoản</li>-->
+							<li name="#"  onclick="dx()">Đăng xuất</li>
+						</ul>
+					</ul>
+
+					<acronym title="Giỏ hàng"><img src="icon/icons8-shopping-bag-64.png" id="img-giohang" onclick="xem_gio_hang()"></acronym>
+					<div id="iconsp_in_cart">9</div>
+					<!--==============tạo phần hiển thị khách hàng============================ -->
+					<!--<ul id="hien-thi-kh">
+						<p id="member">Nguyễn Ngọc Thiện</p>
+						<ul>
+							<li name="#">Tài khoản</li>
+							<li name="#"  onclick="dx()">Đăng xuất</li>
+						</ul>
+					</ul>-->
+				</div>
+				<!--===============Hiển thị các loại sản phẩm=============================== -->
+				<table id="head-link-duoi">
+					<td id="hair"><span onclick="chuyentrangsangsp('Tóc')">TÓC</span></td>
+					<td id="trang-diem"><span onclick="chuyentrangsangsp('Trang điểm')">TRANG ĐIỂM</span></td>
+					<td id="duong-da"><span onclick="chuyentrangsangsp('Dưỡng da')">DƯỠNG DA</span></td>
+					<td id="co-the"><span onclick="chuyentrangsangsp('Cơ thể')">CƠ THỂ</span></td>
+					<td id="co-phukien"><span onclick="chuyentrangsangsp('Cọ & Phụ kiện')">CỌ VÀ PHỤ KIỆN</span></td>
+					<td id = "nuoc-hoa"><span onclick="chuyentrangsangsp('Nước hoa')">NƯỚC HOA</span></td>
+				</table>
+			</div>
+			<!--================================================Khung Đăng Nhập=================================-->
+			<div id="login"  onclick="exit(1)">
+				<div id="khung-login" >
+					<div id="khung-login_dki_dn">
+						<button type="button" name="#" id="khung-login_dn">Đăng nhập</button>
+						<button type="button" name="#" id="khung-login_dki" onClick="show_signup()">Đăng kí</button>
+					</div>
+					<form id="login-form" name="dang-nhap" method="post" action="xuly.php" enctype="multipart/form-data">
+						<table>
+							<tr><input name="taikhoan" type="text" placeholder="Tên đăng nhập" class="input-dang-nhap" id = "dn-user"></tr>
+							<tr><span class="chuthich_dn" id="chuthich10"></span></tr>
+							<tr><input name="password" type="password" placeholder="Mật khẩu" class="input-dang-nhap" id="dn-pass"></tr>
+							<tr><span class="chuthich_dn" id="chuthich11"></span></tr>
+						</table>
+						<a href="#"><div id="forget">Quên mật khẩu?</div></a>
+						<input type="reset" name="#" id="huy1" onclick="exit(1)" value="HỦY BỎ">
+						<input type="button" name="#" value="ĐĂNG NHẬP" id="nut-dang-nhap" onclick="ktdn()">
+						<!--
+						<div id="huy1" onclick="exit(1)">HỦY BỎ</div>
+						<div id="nut-dang-nhap" onclick="ktdn()">ĐĂNG NHẬP</div>-->
+					</form>
+				</div>
+			</div>
+
+			<!-- ============================================Khung đăng kí =========================================-->
+			<div id= "signup" onclick="exit(2)">
+				<div id = "khung-signup">
+					<div id="khung-signup_dki_dn">
+						<button type="button" name="#" id="khung-signup_dn" onClick="show_Login()">Đăng nhập</button>
+						<button type="button" name="#" id="khung-signup_dki">Đăng kí</button>
+					</div>
+					<form id="signup-form" name="dang-ki" method="post" action="xuly.php" enctype="multipart/form-data">
+						<table>
+							<tr>
+								<label class="truong">Tên đăng nhập: </label>
+								<input type="dki-taikhoan" name="text" class="input-dki" id = "dki-user">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich1"></span></tr>
+							<tr>
+								<label class="truong">Mật khẩu: </label>
+								<input type="password" name="dki-password" class="input-dki"  id="dki-pass">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich2"></span></tr>
+							<tr>
+								<label class="truong">Nhập lại mật khẩu: </label>
+								<input type="password" name="dki-nhaplaipassword" class="input-dki" id="re-pass">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich3"></span></tr>
+							<tr>
+								<label class="truong">Họ và tên: </label>
+								<input type="text" name="ho-ten" class="input-dki" id="dki-name">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich4"></span></tr>
+							<tr>
+								<label class="truong">Giới tính: </label>
+								<div id="dki_sex">
+									<label><input type="radio" name="sex" id="dki_sex_nam" onclick="dki_muc_sex(1)">Nam</label> 
+									<label><input type="radio" name="sex" id="dki_sex_nu" onclick="dki_muc_sex(2)">Nữ</label> 
+								</div>
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich5"></span></tr>
+							<tr>
+								<label class="truong">Ngày sinh: </label>
+								<input type="date" name="ngay-sinh" class="input-dki" id="dki_born">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich6"></span></tr>
+							<tr>
+								<label class="truong">Số điện thoại: </label>
+								<input type="tell" name="numphone" class="input-dki"  id="dki-phone">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich7"></span></tr>
+							<tr>
+								<label class="truong">Thư điện tử: </label>
+								<input type="email" name="email" class="input-dki" id="dki-email">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich8"></span></tr>
+							<tr>
+								<label class="truong">Địa chỉ: </label>
+								<input type="text" name="dia-chi" class="input-dki" id="dki-address">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich9"></span></tr>
+
+							<input type="reset" name="#" id="huy2" onclick="exit(2)" value="HỦY BỎ">
+							<input type="button" name="#" id = "nut-dang-ki" onclick="ktdk()" value="ĐĂNG KÍ">
+							<!--
+							<div id="huy2" onclick="exit(2)">HỦY BỎ</div>
+							<div id="nut-dang-ki" onclick="ktdk()">ĐĂNG KÍ</div> -->
+						</table>
+					</form>
+				</div>
+			</div>
+			<!--phần content-->
+			<div id="user_content">
+				<div id="danh_muc">
+					<div id="danh_muc_ten">
+						Xin chào, <span id="xin_chao_ten">Nguyễn Ngọc Thiện</span>
+					</div>
+					<div id="user_quan_li_tk" onclick="user_chuyen_danh_muc(1)">
+						Quản lí tài khoản
+					</div>
+					<div id="user_thong_tin_ca_nhan" onclick="user_chuyen_danh_muc(2)">
+						Thông tin cá nhân
+					</div>
+					<div id="user_so_dia_chi" onclick="user_chuyen_danh_muc(3)">
+						Số địa chỉ
+					</div>
+					<div id="user_don_hang_cua_toi" onclick="user_chuyen_danh_muc(4)">
+						Đơn hàng của tôi
+					</div>
+				</div>
+				<div id="user_noi_dung">
+					<div id="user_tieu_de">
+						Thông tin cá nhân
+					</div>
+					<div id="user_nd">
+						<!--========================Phần quản lý tài khoản==========================--><!--
+						<div class="chia_qltk">
+							<div class="chia_qltk_tieu_de">
+								Thông tin cá nhân |
+								<span>Chỉnh sửa</span>
+							</div>
+							<div id="chia_qltk_tieu_de_ten">Nguyễn Ngọc Thiện</div>
+						</div>
+						<div class="chia_qltk">
+							<div class="chia_qltk_tieu_de">
+								Số địa chỉ |
+								<span>Chỉnh sửa</span>
+							</div>
+							<div class="dia_chi_mac_dinh">Địa chỉ nhận hàng mặc định</div>
+							<div id="so_dia_chi_ten">Nguyễn Ngọc Thiện</div>
+							<div class="chia_qltk_address">
+								<span>9/26 Huyền Trân Công Chúa, Đập Đá, An Nhơn, Bình Định</span><br>
+								<span>(+84)0364117408</span>
+							</div>
+						</div>
+						<div class="chia_qltk">
+							<div class="chia_qltk_tieu_de"></div>
+							<div class="dia_chi_mac_dinh">Địa chỉ nhận hàng mặc định</div>
+							<div id="mac_dinh_dia_chi">Nguyễn Ngọc Thiện</div>
+							<div class="chia_qltk_address">
+								<span>9/26 Huyền Trân Công Chúa, Đập Đá, An Nhơn, Bình Định</span><br>
+								<span>(+84)0364117408</span>
+							</div>
+						</div>
+						<!--=============================Phần thông tin cá nhân========================--><!--
+						<div id="thong_tin_ca_nhan">
+							<div id="info_body">
+								<div class="user_class">
+									<div class="user_class_ko_doi">Họ tên: </div>
+									<span id="info_body_ten" class="user_class_sua">Nguyễn Ngọc Thiện</span>
+									<div class="user_class_ko_doi">Ngày sinh: </div>
+									<span id="info_body_born_date" class="user_class_sua">Vui lòng nhập sinh nhật của bạn</span>
+								</div>
+								<div class="user_class">
+									<div class="user_class_ko_doi">Thư điện tử: </div>
+									<span id="info_body_email" class="user_class_sua">tructruong.070202@gmail.com</span>
+									<div class="user_class_ko_doi">Giới tính: </div>
+									<span id="info_body_sex" class="user_class_sua">Vui lòng nhập sinh nhật của bạn</span>
+								</div>
+								<div class="user_class">
+									<div class="user_class_ko_doi">Số điện thoại: </div>
+									<span id="info_body_phone" class="user_class_sua">(+84)0364117408</span>
+								</div>
+							</div>
+							<div id="info_sua">
+								<button type="button">SỬA THÔNG TIN</button>
+								<button type="button">THAY ĐỔI MẬT KHẨU</button>
+							</div>
+						</div>
+
+						<!--=============================Phần số địa chỉ==================================--><!--
+						<div id="so_dia_chi">
+							<div id="so_dia_chi_line1">
+								<div class="so_dia_chi_line1_ten">Tên</div>
+								<div id="so_dia_chi_line1_diachi">Địa chỉ</div>
+								<div class="so_dia_chi_line1_ten">Số điện thoại</div>
+								<div class="so_dia_chi_line1_ten"></div>
+							</div>
+							<div class="so_dia_chi_line">
+								<div class="so_dia_chi_line_ten">Nguyễn Ngọc Thiện</div>
+								<div class="so_dia_chi_line_diachi">9/26 Huyền Trân Công Chúa, Đập Đá, An Nhơn, Bình Định</div>
+								<div class="so_dia_chi_line_ten">(+84)0364117408</div>
+								<div class="so_dia_chi_line_ten">Địa chỉ nhận hàng mặc định</div>
+							</div>
+							<div class="so_dia_chi_line">
+								<div class="so_dia_chi_line_ten">Nguyễn Ngọc Thiện</div>
+								<div class="so_dia_chi_line_diachi">9/26 Huyền Trân Công Chúa, Đập Đá, An Nhơn, Bình Định</div>
+								<div class="so_dia_chi_line_ten">(+84)0364117408</div>
+								<div class="so_dia_chi_line_ten">Địa chỉ thanh toán mặc định</div>
+							</div>
+							<button type="button">Sửa địa chỉ</button>
+						</div>
+
+						<!--=========================Phần đơn hàng của tôi================================-->
+						<!--
+						<div id="don_hang_cua_toi">
+							<div class="don_hang_cua_toi_madon">
+								<div id="ma_hoa_don">Mã hóa đơn</div>
+								<div id="so_luong_san_pham">Số lượng sản phẩm</div>
+								<div id="thanh_tien">Thành tiền</div>
+								<div id="trang_thai">Trạng thái</div>
+							</div>
+							<div id="user_chinh_sua">
+								<div id="don_hang_1_1" class="don_hang_cua_toi_mathang">
+									<div class="ma_hoa_don">1000</div>
+									<div class="so_luong_san_pham">10000</div>
+									<div class="thanh_tien">3546846848749</div>
+									<div class="trang_thai">Đang xử lý</div>
+								</div>
+								<div id="don_hang_1_1" class="don_hang_cua_toi_mathang">
+									<div class="ma_hoa_don">1000</div>
+									<div class="so_luong_san_pham">10000</div>
+									<div class="thanh_tien">3546846848749</div>
+									<div class="trang_thai">Đang xử lý</div>
+								</div>
+								<div id="don_hang_1_1" class="don_hang_cua_toi_mathang">
+									<div class="ma_hoa_don">1000</div>
+									<div class="so_luong_san_pham">10000</div>
+									<div class="thanh_tien">3546846848749</div>
+									<div class="trang_thai">Đang xử lý</div>
+								</div>
+								<div id="don_hang_1_1" class="don_hang_cua_toi_mathang">
+									<div class="ma_hoa_don">1000</div>
+									<div class="so_luong_san_pham">10000</div>
+									<div class="thanh_tien">3546846848749</div>
+									<div class="trang_thai">Đang xử lý</div>
+								</div>
+								<div id="don_hang_1_1" class="don_hang_cua_toi_mathang">
+									<div class="ma_hoa_don">1000</div>
+									<div class="so_luong_san_pham">10000</div>
+									<div class="thanh_tien">3546846848749</div>
+									<div class="trang_thai">Đang xử lý</div>
+								</div>
+								<div id="don_hang_1_1" class="don_hang_cua_toi_mathang">
+									<div class="ma_hoa_don">1000</div>
+									<div class="so_luong_san_pham">10000</div>
+									<div class="thanh_tien">3546846848749</div>
+									<div class="trang_thai">Đang xử lý</div>
+								</div>
+								<div id="don_hang_1_1" class="don_hang_cua_toi_mathang">
+									<div class="ma_hoa_don">1000</div>
+									<div class="so_luong_san_pham">10000</div>
+									<div class="thanh_tien">3546846848749</div>
+									<div class="trang_thai">Đang xử lý</div>
+								</div>
+								<div id="don_hang_1_1" class="don_hang_cua_toi_mathang">
+									<div class="ma_hoa_don">1000</div>
+									<div class="so_luong_san_pham">10000</div>
+									<div class="thanh_tien">3546846848749</div>
+									<div class="trang_thai">Đang xử lý</div>
+								</div>
+								<div id="don_hang_1_1" class="don_hang_cua_toi_mathang">
+									<div class="ma_hoa_don">1000</div>
+									<div class="so_luong_san_pham">10000</div>
+									<div class="thanh_tien">3546846848749</div>
+									<div class="trang_thai">Đang xử lý</div>
+								</div>
+								<div id="don_hang_1_1" class="don_hang_cua_toi_mathang">
+									<div class="ma_hoa_don">1000</div>
+									<div class="so_luong_san_pham">10000</div>
+									<div class="thanh_tien">3546846848749</div>
+									<div class="trang_thai">Đang xử lý</div>
+								</div>
+							</div>
+							<div id="user_phan_trang">
+								<div type="button" id="0" onclick="phantrang(0)"><</div>
+								<div type="button" id="1" onclick="phantrang(1)">1</div>
+								<div type="button" id="2" onclick="phantrang(2)">2</div>
+								<div type="button" id="3" onclick="phantrang(3)">3</div>
+								<div type="button" id="4" onclick="phantrang(4)">4</div>
+								<div type="button" id="5" onclick="phantrang(5)">5</div>
+								<div type="button" id="6" onclick="phantrang(6)">6</div>
+								<div type="button" id="7" onclick="phantrang(7)">7</div>
+								<div type="button" id="8" onclick="phantrang(8)">8</div>
+								<div type="button" id="9" onclick="phantrang(9)">9</div>
+								<div type="button" id="11" onclick="phantrang(11)">></div>
+							</div>
+						</div>
+						<!--<div id="thong_tin_ca_nhan">
+							<div id="info_body">
+								<div class="user_class">
+									<div class="user_class_ko_doi">Họ tên: </div>
+									<div class="user_class_sua"><input tyoe = "text" id="info_body_ten" value="Nguyễn Ngọc Thiện"><div class="sai">Tên sai</div></div>
+									<div class="user_class_ko_doi">Ngày sinh: </div>
+									<div class="user_class_sua"><input type="date" id="info_body_born_date"><div class="sai">Tên sai</div></div>
+								</div>
+								<div class="user_class">
+									<div class="user_class_ko_doi">Thư điện tử: </div>
+									<div class="user_class_sua"><input id="info_body_email" type="email" value="tructruong.070202@gmail.com"><div class="sai">Tên sai</div></div>
+									<div class="user_class_ko_doi">Giới tính: </div>
+									<div class="user_class_sua"><input type="text" id="info_body_sex" value="NAM"><div class="sai">Tên sai</div></div>
+								</div>
+								<div class="user_class">
+									<div class="user_class_ko_doi">Số điện thoại: </div>
+									<div class="user_class_sua"><input type="text" id="info_body_phone" value="0364117408"><div class="sai">Tên sai</div></div>
+								</div>
+							</div>
+							<div id="info_sua">
+								<button type="button">LƯU THAY ĐỔI</button>
+							</div>
+						</div>
+						<div id="thong_tin_ca_nhan">
+							<div id="doi_mk">
+								<div>Mật khẩu hiện tại</div>
+								<input type="password" name="" class="user_mk">
+								<div id="doi_mk_1"></div>
+								<div>Mật khẩu mới</div>
+								<input type="password" name="" class="user_mk">
+								<div id="doi_mk_2"></div>
+								<div>Nhập lại mật khẩu mới</div>
+								<input type="password" name="" class="user_mk">
+								<div id="doi_mk_3"></div>
+								<button type="button">LƯU THAY ĐỔI</button>
+							</div>
+						</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="index_footer">
+			<div id="index_footer_SATISFY">
+				<div id="index_footer_SATISFY_name"><a href="index.html">SATISFY</a></div>
+				<span>www.satisty.com là kênh mua sắm mỹ phẩm, làm đẹp hàng đầu Việt Nam được các beauty blogger lựa chọn để giới thiệu sản phẩm họ yêu thích tới khách hàng, người hâm mộ.</span>
+			</div>
+			<div class="index_footer_danhmuc">
+				<div class="index_footer_danhmuc_ds">Danh mục Sản phẩm</div>
+				<div><span onclick="chuyentrangsangsp('Trang điểm')">Trang điểm</span></div><br>
+				<div><span onclick="chuyentrangsangsp('Tóc')">Tóc</span></div><br>
+				<div><span onclick="chuyentrangsangsp('Dưỡng da')">Dưỡng da</span></div><br>
+				<div><span onclick="chuyentrangsangsp('Cơ thể')">Cơ thể</span></div><br>
+				<div><span onclick="chuyentrangsangsp('Cọ & Phụ kiện')">Cọ & Phụ kiện</span></div><br>
+				<div><span onclick="chuyentrangsangsp('Nước hoa')">Nước hoa</span></div>
+			</div>
+			<div class="index_footer_danhmuc">
+				<div class="index_footer_danhmuc_ds">Thông tin & Hướng dẫn</div>
+				<div>Về SATISFY</div><br>
+				<div>SATISFY Magazine</div><br>
+				<div>SATISFY Community</div><br>
+				<div>SATISFY Coin</div><br>
+				<div>SATISFY Store</div><br>
+				<div>Chính sách và bảo mật</div>
+			</div>
+		</div>
+ 	</body>
+</html>

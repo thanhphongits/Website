@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PMP Musical | Quản lý tài khoản</title>
+    <link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-user.css">
+    <link rel="icon" href="../image/logo.png">
+</head>
+
+<body>
+    <!--Bat dau header-->
+    <header id="header">
+        <!--Bat dau header top-->
+        <div class="headerTop">
+            <div class="container">
+                <img src="../image/phone-icon.svg" alt="phone" style="width:1%;">
+                <span style="font-style: italic;">Hotline:</span>
+                <span style="font-weight: bold; color: red;">0980.262.203 (Hà Nội)</span>
+                <span style="font-weight: bold; color: red;">0569.230.562 (Hồ Chí Minh)</span>
+            </div>
+        </div>
+        <!--Ket thuc header top-->
+        <!--Bat dau header mid-->
+        <div class="headerMid">
+            <div class="container">
+                <div class="headerMid-logo">
+                    <a href="../index-user.html" title="Trang chủ">
+                        <img src="../image/logo.png" alt="logo">
+                    </a>
+                </div>
+                <form class="headerMid-search">
+                    <input type="search" placeholder="Bạn muốn tìm gì..." aria-label="Search" name="search" id="getIn">
+                    <button type="button" value="search" id="getBut"><img src="../image/search-icon.svg" alt="search" style="width:100%; text-align: center;" onclick="timkiem();"></button>
+                </form>
+                <div class="headerMid-notify">
+                    <!--Đăng nhập, đăng ký, giỏ hàng-->
+                    <ul>
+                        <li class="login">
+                            <a href="../user/index.html"><span><img src="../image/user-circle-solid.svg"></span>Quản lý tài khoản</a>
+                        </li>
+                        <li class="shopping-cart">
+                            <a href="../shoppingcart-user.html"><span><img src="../image/shopping-cart-icon.svg" title="Giỏ hàng" alt="shopping-cart-icon"></span>Giỏ hàng</a>
+                        </li>
+                        <li class="logout" style="margin-left: 20px;">
+                            <a href="../index.html"><span ><img src="../image/sign-out-alt-solid.svg" title="Đăng xuất">Đăng xuất</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--Ket thuc header mid-->
+    </header>
+    <!--Ket thuc header-->
+    <!--Bat dau navbar-->
+    <nav class="navigation">
+        <ul>
+            <li>
+                <a href="../guitar-user.html">
+                    <span>
+                  <img src="../image/guitar-icon.png" alt="guitar-icon"/>
+                </span> GUITAR
+                </a>
+            </li>
+            <li>
+                <a href="../piano-organ-user.html">
+                    <span>
+                  <img src="../image/piano-icon.png" alt="piano-icon"/>
+                </span> PIANO | ORGAN
+                </a>
+            </li>
+            <li>
+                <a href="../ukulele-user.html">
+                    <span>
+                  <img src="../image/ukulele-icon.png" alt="ukulele-icon"/>
+                </span> Ukulele
+                </a>
+            </li>
+            <li>
+                <a href="../nhac-cu-khac-user.html">
+                    <span>
+                  <img src="../image/nhac-cu-khac-icon.png" alt="drum-icon"/>
+                </span> Nhạc cụ khác
+                </a>
+            </li>
+            <li>
+                <a href="../khoa-hoc-user.html">
+                    <span>
+                  <img src="../image/khoa-hoc-icon.svg" alt="khoa-hoc-icon"/>
+                </span> KHÓA HỌC
+                </a>
+            </li>
+            <li>
+                <a href="../sach-phu-kien-user.html">
+                    <span>
+                  <img src="../image/phu-kien-icon.png" alt="phu-kien-icon"/>
+                </span> SÁCH | PHỤ KIỆN
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--Ket thuc navbar-->
+
+    <div class="Wrapper" style="background: #f4f4f4;">
+        <div class="text-lien-ket">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="../index-user.html">Trang chủ</a>&nbsp;
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="index.html">Thông tin tài khoản</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="menu-left">
+                <div class="profiles">
+                    <p class="image"><img src="../image/user-circle-solid.svg"></p>
+                    <p class="name">Tài khoản của</p>
+                    <h6>Nguyễn Thương Mến</h6>
+                </div>
+
+                <div class="menu-dropdown">
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="active">
+                            <a href="index.html"><img src="../image/user-login-icon.svg" width="13px;">Thông tin tài khoản</a>
+                        </li>
+                        <li>
+                            <a href="QuanLyDonHang.html"><img src="../image/clipboard-list-solid.svg" width="13px;">Quản lý đơn hàng</a>
+                        </li>
+                        <li>
+                            <a href="QuanLySoDiaChi.html"><img src="../image/map-marker-alt-solid.svg" width="13px;">Quản lý sổ địa chỉ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content-right">
+            <h1>Thông tin tài khoản</h1>
+            <div class="content-main">
+                <div class="form-control">
+                    <label>Họ và tên</label>
+                    <input type="text" name="Họ tên" placeholder="Họ tên" value="Nguyễn Thương Mến">
+                </div>
+                <div class="form-control">
+                    <label>Số điện thoại</label>
+                    <input type="text" name="SDT" placeholder="SDT" value="0562301245">
+                </div>
+                <div class="form-control">
+                    <label>Email</label>
+                    <input type="text" name="Email" placeholder="Email" value="thuongmen@yahoo.com">
+                </div>
+                <div class="form-control">
+                    <label>Giới tính</label>
+                    <input type="radio" name="Nam" placeholder="Nam" style="margin-left: -20px;"><span>Nam</span>
+                    <input type="radio" name="Nam" placeholder="Nu" value="checked"><span>Nữ</span>
+                    <input type="radio" name="Nam" placeholder="khac" value="checked"><span>Khác</span>
+                </div>
+                <button type="submit" class="btn-update">Cập nhật</button>
+            </div>
+        </div>
+    </div>
+    <!--Bắt đầu Footer-->
+    <footer id="footer" style="margin-top: -40px;">
+        <div class="container">
+            <ul>
+                <li class="footer1">
+                    <div class="heading">Chính sách</div>
+                    <div class="content-footer">
+                        <ul>
+                            <li><a href="#" rel="nofollow">Chính sách giao hàng</a></li>
+                            <li><a href="#" rel="nofollow">Chính sách bảo hành & đổi trả</a></li>
+                            <li><a href="#" rel="nofollow">Chính sách thanh toán</a></li>
+                            <li><a href="#" rel="nofollow">Chính sách bảo mật thông tin</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="footer1">
+                    <div class="heading">Dịch vụ & hỗ trợ</div>
+                    <div class="content-footer">
+                        <ul>
+                            <li><a href="#" rel="nofollow">An toàn mua bán</a></li>
+                            <li><a href="#" rel="nofollow">Đăng ký cộng tác viên</a></li>
+                            <li><a href="#" rel="nofollow">Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="footer1">
+                    <div class="heading">Thông tin liên hệ</div>
+                    <div class="content-footer">
+                        <div class="social-media">
+                            <a href="#" class="button-facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="button-ggplus"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="button-youtube"><i class="fa fa-youtube"></i></a>
+                        </div>
+                        <span style="font-weight: bold; color: red;">0980.262.203 (Hà Nội)</span>
+                        <span style="font-weight: bold; color: red;">0569.230.562 (Hồ Chí Minh)</span>
+                    </div>
+                </li>
+
+                <li class="footer1">
+                    <div class="heading">Góp ý, phản ánh</div>
+                    <div class="content-footer">
+                        <span style="font-weight: bold; color: red;">0980.262.203 (Hà Nội)</span>
+                        <span style="font-weight: bold; color: red;">0569.230.562 (Hồ Chí Minh)</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Text cuối-->
+    </footer>
+    <!--Kết thúc Footer-->
+
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+
+</html>

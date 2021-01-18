@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>SATISFY - Mỹ phẩm làm đẹp</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/index.css">
+		<link rel="stylesheet" href="css/chung.css">
+		<link href="fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet" />
+		<script src="js/index.js"></script>
+	</head>
+	<body id ="body">
+		<div id ="main">
+			<!--================================= phần head ===================================-->
+			<div id="head">
+				<table id="image-phone">
+						<td><img src="icon/phone4.png" class="image-head"></td>
+						<td>0364117408</td>
+				</table>
+
+				<table id ="image-sale">
+					<td><img src="icon/sale4.png" class="image-head"></td>
+					<td>Giảm giá</td>
+				</table>
+
+				<table id ="image-car">
+					<td><img src="icon/order.png" class="image-head"></td>
+					<td>Kiểm tra đơn hàng</td>
+				</table>
+			</div>
+
+			<!--=============================================phần head-link==================================-->
+			<div id="head-link">
+				<div id="head-link-tren">
+					<a href="index.html" id ="satisfy">SATISFY</a>
+					<form name="thanh-tim-kiem" method="post" action="" enctype="multipart/form-data" id="form_tim_kiem">
+						<input type="text" name = "search1" id="search1" placeholder="Tìm kiếm : halio, okame..." class="input">
+						<button type="button" onClick="addSearch()" id="button1"><img id = "img-search1" src="icon/search2.png"></button>
+					</form>
+					<pre id="dang-nhap"><span name="#" onClick="show_Login()">Đăng nhập</span>/<span name="#" onClick="show_signup()">Đăng kí</span></pre>
+					<!--==============tạo phần hiển thị khách hàng============================ -->
+					<ul id="hien-thi-kh">
+						<p id="member" onclick="to_user()">Nguyễn Ngọc Thiện</p>
+						<ul>
+					<!--		<li name="#">Tài khoản</li>-->
+							<li name="#"  onclick="dx()">Đăng xuất</li>
+						</ul>
+					</ul>
+
+					<acronym title="Giỏ hàng"><img src="icon/icons8-shopping-bag-64.png" id="img-giohang" onclick="xem_gio_hang()"></acronym>
+					<div id="iconsp_in_cart">9</div>
+					<!--==============tạo phần hiển thị khách hàng============================ -->
+					<!--<ul id="hien-thi-kh">
+						<p id="member">Nguyễn Ngọc Thiện</p>
+						<ul>
+							<li name="#">Tài khoản</li>
+							<li name="#"  onclick="dx()">Đăng xuất</li>
+						</ul>
+					</ul>-->
+				</div>
+				<!--===============Hiển thị các loại sản phẩm=============================== -->
+				<table id="head-link-duoi">
+					<td id="hair"><span onclick="chuyentrangsangsp('Tóc')">TÓC</span></td>
+					<td id="trang-diem"><span onclick="chuyentrangsangsp('Trang điểm')">TRANG ĐIỂM</span></td>
+					<td id="duong-da"><span onclick="chuyentrangsangsp('Dưỡng da')">DƯỠNG DA</span></td>
+					<td id="co-the"><span onclick="chuyentrangsangsp('Cơ thể')">CƠ THỂ</span></td>
+					<td id="co-phukien"><span onclick="chuyentrangsangsp('Cọ & Phụ kiện')">CỌ VÀ PHỤ KIỆN</span></td>
+					<td id = "nuoc-hoa"><span onclick="chuyentrangsangsp('Nước hoa')">NƯỚC HOA</span></td>
+				</table>
+			</div>
+			<!--=============================================dot dot dot ==========================================-->
+			<div id="img-js">
+					<img name = "img-auto1" src="image/quangcao1.jpg" id="img-1">
+					<table>
+						<button type="button" id="dot1" onclick="dot(1)"></button>
+						<button type="button" id="dot2" onclick="dot(2)"></button>
+						<button type="button" id="dot3" onclick="dot(3)"></button>
+						<button type="button" id="dot4" onclick="dot(4)"></button>
+						<button type="button" id="dot5" onclick="dot(5)"></button>
+					</table>
+					<button type="button" id="img-left"><img src="icon/left.png" onclick="img_trai()"></button>
+					<button type="button" id="img-right"><img src="icon/right.png" onclick="img_phai()"></button>
+			</div>
+			<!--================================================Khung Đăng Nhập=================================-->
+			<div id="login"  onclick="exit(1)">
+				<div id="khung-login" >
+					<div id="khung-login_dki_dn">
+						<button type="button" name="#" id="khung-login_dn">Đăng nhập</button>
+						<button type="button" name="#" id="khung-login_dki" onClick="show_signup()">Đăng kí</button>
+					</div>
+					<form id="login-form" name="dang-nhap" method="post" action="xuly.php" enctype="multipart/form-data">
+						<table>
+							<tr><input name="taikhoan" type="text" placeholder="Tên đăng nhập" class="input-dang-nhap" id = "dn-user"></tr>
+							<tr><span class="chuthich_dn" id="chuthich10"></span></tr>
+							<tr><input name="password" type="password" placeholder="Mật khẩu" class="input-dang-nhap" id="dn-pass"></tr>
+							<tr><span class="chuthich_dn" id="chuthich11"></span></tr>
+						</table>
+						<a href="#"><div id="forget">Quên mật khẩu?</div></a>
+						<input type="reset" name="#" id="huy1" onclick="exit(1)" value="HỦY BỎ">
+						<input type="button" name="#" value="ĐĂNG NHẬP" id="nut-dang-nhap" onclick="ktdn()">
+						<!--
+						<div id="huy1" onclick="exit(1)">HỦY BỎ</div>
+						<div id="nut-dang-nhap" onclick="ktdn()">ĐĂNG NHẬP</div>-->
+					</form>
+				</div>
+			</div>
+
+			<!-- ============================================Khung đăng kí =========================================-->
+			<div id= "signup" onclick="exit(2)">
+				<div id = "khung-signup">
+					<div id="khung-signup_dki_dn">
+						<button type="button" name="#" id="khung-signup_dn" onClick="show_Login()">Đăng nhập</button>
+						<button type="button" name="#" id="khung-signup_dki">Đăng kí</button>
+					</div>
+					<form id="signup-form" name="dang-ki" method="post" action="xuly.php" enctype="multipart/form-data">
+						<table>
+							<tr>
+								<label class="truong">Tên đăng nhập: </label>
+								<input type="dki-taikhoan" name="text" class="input-dki" id = "dki-user">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich1"></span></tr>
+							<tr>
+								<label class="truong">Mật khẩu: </label>
+								<input type="password" name="dki-password" class="input-dki"  id="dki-pass">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich2"></span></tr>
+							<tr>
+								<label class="truong">Nhập lại mật khẩu: </label>
+								<input type="password" name="dki-nhaplaipassword" class="input-dki" id="re-pass">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich3"></span></tr>
+							<tr>
+								<label class="truong">Họ và tên: </label>
+								<input type="text" name="ho-ten" class="input-dki" id="dki-name">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich4"></span></tr>
+							<tr>
+								<label class="truong">Giới tính: </label>
+								<div id="dki_sex">
+									<label><input type="radio" name="sex" id="dki_sex_nam" onclick="dki_muc_sex(1)">Nam</label> 
+									<label><input type="radio" name="sex" id="dki_sex_nu" onclick="dki_muc_sex(2)">Nữ</label> 
+								</div>
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich5"></span></tr>
+							<tr>
+								<label class="truong">Ngày sinh: </label>
+								<input type="date" name="ngay-sinh" class="input-dki" id="dki_born">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich6"></span></tr>
+							<tr>
+								<label class="truong">Số điện thoại: </label>
+								<input type="tell" name="numphone" class="input-dki"  id="dki-phone">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich7"></span></tr>
+							<tr>
+								<label class="truong">Thư điện tử: </label>
+								<input type="email" name="email" class="input-dki" id="dki-email">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich8"></span></tr>
+							<tr>
+								<label class="truong">Địa chỉ: </label>
+								<input type="text" name="dia-chi" class="input-dki" id="dki-address">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich9"></span></tr>
+
+							<input type="reset" name="#" id="huy2" onclick="exit(2)" value="HỦY BỎ">
+							<input type="button" name="#" id = "nut-dang-ki" onclick="ktdk()" value="ĐĂNG KÍ">
+							<!--
+							<div id="huy2" onclick="exit(2)">HỦY BỎ</div>
+							<div id="nut-dang-ki" onclick="ktdk()">ĐĂNG KÍ</div> -->
+						</table>
+					</form>
+				</div>
+			</div>
+			<!--phần content-->
+			<div id="content">
+				<div class="content_title">
+					SẢN PHẨM BÁN CHẠY
+				</div>
+				<div class="lk_sp" id="sp_ban_chay">
+					<div class="khung_sp" id="sp_chay_0"></div>
+					<div class="khung_sp" id="sp_chay_1"></div>
+					<div class="khung_sp" id="sp_chay_2"></div>
+					<div class="khung_sp" id="sp_chay_3"></div>
+					<div class="khung_sp" id="sp_chay_4"></div>
+
+					<table>
+						<button type="button" class="dot1" onclick="dot(1)"></button>
+						<button type="button" class="dot2" onclick="dot(2)"></button>
+						<button type="button" class="dot3" onclick="dot(3)"></button>
+						<button type="button" class="dot4" onclick="dot(4)"></button>
+						<button type="button" class="dot5" onclick="dot(5)"></button>
+					</table>
+					<button type="button" class="img_left"><</button>
+					<button type="button" class="img_right">></button>
+
+				</div>
+
+				<div class="content_title">
+					MUA LẺ MỚI NHẤT
+				</div>
+				<div class="lk_sp" id="sp_mua_le">
+					<div class="khung_sp" id="sp_mua_le_0"></div>
+					<div class="khung_sp" id="sp_mua_le_1"></div>
+					<div class="khung_sp" id="sp_mua_le_2"></div>
+					<div class="khung_sp" id="sp_mua_le_3"></div>
+					<div class="khung_sp" id="sp_mua_le_4"></div>
+
+					<table>
+						<button type="button" class="dot1" onclick="dot(1)"></button>
+						<button type="button" class="dot2" onclick="dot(2)"></button>
+						<button type="button" class="dot3" onclick="dot(3)"></button>
+						<button type="button" class="dot4" onclick="dot(4)"></button>
+						<button type="button" class="dot5" onclick="dot(5)"></button>
+					</table>
+					<button type="button" class="img_left"><</button>
+					<button type="button" class="img_right">></button>
+
+				</div>
+
+				<div class="content_title">
+					TÌM KIẾM PHỔ BIẾN
+				</div>
+				<div class="lk_sp" id="sp_tim_kiem">
+					<div class="khung_sp" id="sp_tim_kiem_0"></div>
+					<div class="khung_sp" id="sp_tim_kiem_1"></div>
+					<div class="khung_sp" id="sp_tim_kiem_2"></div>
+					<div class="khung_sp" id="sp_tim_kiem_3"></div>
+					<div class="khung_sp" id="sp_tim_kiem_4"></div>
+
+					<table>
+						<button type="button" class="dot1" onclick="dot(1)"></button>
+						<button type="button" class="dot2" onclick="dot(2)"></button>
+						<button type="button" class="dot3" onclick="dot(3)"></button>
+						<button type="button" class="dot4" onclick="dot(4)"></button>
+						<button type="button" class="dot5" onclick="dot(5)"></button>
+					</table>
+					<button type="button" class="img_left"><</button>
+					<button type="button" class="img_right">></button>
+
+				</div>
+
+
+				<div id="index_footer">
+					<div id="index_footer_SATISFY">
+						<div id="index_footer_SATISFY_name"><a href="index.html">SATISFY</a></div>
+						<span>www.satisty.com là kênh mua sắm mỹ phẩm, làm đẹp hàng đầu Việt Nam được các beauty blogger lựa chọn để giới thiệu sản phẩm họ yêu thích tới khách hàng, người hâm mộ.</span>
+					</div>
+					<div class="index_footer_danhmuc">
+						<div class="index_footer_danhmuc_ds">Danh mục Sản phẩm</div>
+						<div><span onclick="chuyentrangsangsp('Trang điểm')" style="cursor: pointer;">Trang điểm</span></div><br>
+						<div><span onclick="chuyentrangsangsp('Tóc')" style="cursor: pointer;">Tóc</span></div><br>
+						<div><span onclick="chuyentrangsangsp('Dưỡng da')" style="cursor: pointer;">Dưỡng da</span></div><br>
+						<div><span onclick="chuyentrangsangsp('Cơ thể')" style="cursor: pointer;">Cơ thể</span></div><br>
+						<div><span onclick="chuyentrangsangsp('Cọ & Phụ kiện')" style="cursor: pointer;">Cọ & Phụ kiện</span></div><br>
+						<div><span onclick="chuyentrangsangsp('Nước hoa')" style="cursor: pointer;">Nước hoa</span></div>
+					</div>
+					<div class="index_footer_danhmuc">
+						<div class="index_footer_danhmuc_ds">Thông tin & Hướng dẫn</div>
+						<div>Về SATISFY</div><br>
+						<div>SATISFY Magazine</div><br>
+						<div>SATISFY Community</div><br>
+						<div>SATISFY Coin</div><br>
+						<div>SATISFY Store</div><br>
+						<div>Chính sách và bảo mật</div>
+					</div>
+				</div>
+			</div>
+		</div>
+ 	</body>
+</html>

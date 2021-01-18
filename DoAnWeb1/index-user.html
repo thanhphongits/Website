@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PMP Musical | Nhạc cụ Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+    <link rel="icon" href="image/logo.png">
+</head>
+
+<body>
+    <!--Bat dau header-->
+    <header id="header">
+        <!--Bat dau header top-->
+        <div class="headerTop">
+            <div class="container">
+                <img src="image/phone-icon.svg" alt="phone" style="width:1%;">
+                <span style="font-style: italic;">Hotline:</span>
+                <span style="font-weight: bold; color: red;">0980.262.203 (Hà Nội)</span>
+                <span style="font-weight: bold; color: red;">0569.230.562 (Hồ Chí Minh)</span>
+            </div>
+        </div>
+        <!--Ket thuc header top-->
+        <!--Bat dau header mid-->
+        <div class="headerMid">
+            <div class="container">
+                <div class="headerMid-logo">
+                    <a href="index-user.html" title="Trang chủ">
+                        <img src="image/logo.png" alt="logo">
+                    </a>
+                </div>
+                <form class="headerMid-search">
+                    <input type="search" placeholder="Bạn muốn tìm gì..." aria-label="Search" name="search" id="getIn">
+                    <button type="button" value="search" id="getBut"><img src="image/search-icon.svg" alt="search" style="width:100%; text-align: center;" onclick="timkiem()"></button>
+                </form>
+                <div class="headerMid-notify">
+                    <!--Đăng nhập, đăng ký, giỏ hàng-->
+                    <ul>
+                        <li class="login">
+                            <a href="user/index.html"><span><img src="image/user-circle-solid.svg"></span>Quản lý tài khoản</a>
+                        </li>
+                        <li class="shopping-cart">
+                            <a href="shoppingcart-user.html"><span><img src="image/shopping-cart-icon.svg" title="Giỏ hàng" alt="shopping-cart-icon"></span>Giỏ hàng</a>
+                        </li>
+                        <li class="logout" style="margin-left: 20px;">
+                            <a href="index.html"><span ><img src="image/sign-out-alt-solid.svg" title="Đăng xuất">Đăng xuất</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--Ket thuc header mid-->
+    </header>
+    <!--Ket thuc header-->
+    <!--Bat dau navbar-->
+    <div class="menu">
+        <nav class="navigation">
+            <ul>
+                <li>
+                    <a href="guitar-user.html">
+                        <span>
+                <img src="image/guitar-icon.png" alt="guitar-icon"/>
+              </span> GUITAR
+                    </a>
+                </li>
+                <li>
+                    <a href="piano-organ-user.html">
+                        <span>
+                <img src="image/piano-icon.png" alt="piano-icon"/>
+              </span> PIANO | ORGAN
+                    </a>
+                </li>
+                <li>
+                    <a href="ukulele-user.html">
+                        <span>
+                <img src="image/ukulele-icon.png" alt="ukulele-icon"/>
+              </span> Ukulele
+                    </a>
+                </li>
+                <li>
+                    <a href="nhac-cu-khac-user.html">
+                        <span>
+                <img src="image/nhac-cu-khac-icon.png" alt="drum-icon"/>
+              </span> Nhạc cụ khác
+                    </a>
+                </li>
+                <li>
+                    <a href="khoa-hoc-user.html">
+                        <span>
+                <img src="image/khoa-hoc-icon.svg" alt="khoa-hoc-icon"/>
+              </span> KHÓA HỌC
+                    </a>
+                </li>
+                <li>
+                    <a href="sach-phu-kien-user.html">
+                        <span>
+                <img src="image/phu-kien-icon.png" alt="phu-kien-icon"/>
+              </span> SÁCH | PHỤ KIỆN
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--Ket thuc navbar-->
+    <!--Bat dau Content main-->
+    <div class="slide">
+        <div class="dieuhuong">
+            <i class="fa fa-chevron-circle-left" onclick="Back();"></i>
+            <i class="fa fa-chevron-circle-right" onclick="Next();"></i>
+        </div>
+        <div class="chuyen-slide">
+            <a href="guitar-user.html"><img src="image/guitar-bg.png" alt="Guitar Banner"></a>
+            <a href="piano-organ-user.html"><img src="image/piano-organ-bg.png" alt="Piano - Organ Banner"></a>
+            <a href="ukulele-user.html"><img src="image/ukulele-bg.png" alt="Ukulele Banner"></a>
+            <a href="nhac-cu-khac-user.html"><img src="image/nhac-cu-khac-bg.png" alt="Nhạc cụ khác Banner"></a>
+            <a href="khoa-hoc-user.html"><img src="image/khoa-hoc-bg.png" alt="Khóa học Banner"></a>
+            <a href="sach-phu-kien-user.html"><img src="image/sach-phu-kien-bg.png" alt="Sách - phụ kiện banner"></a>
+        </div>
+    </div>
+    <!--Bat dau San phan noi bat-->
+    <div class="san-pham-noi-bat" id="spnb">
+        <div class="text-spnb">
+            <h2 class="title"><a href="#spnb">Sản phẩm nổi bật</a></h2>
+        </div>
+        <!--Box San pham-->
+        <ul class="list-product">
+            <!--Product 1-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="guitar-chi-tiet-user.html" title="Đàn Guitar Acoustic Hohner SD65TBK">
+                            <img src="image/product-img/product-img1.jpg" alt="Đàn Guitar Acoustic Hohner SD65TBK">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT" style="float: left;padding-right: 5px;"><span>NỔI BẬT</span></div>
+                        <div class="NEW"><span>MỚI</span></div>
+                        <h4>
+                            <a href="guitar-chi-tiet-user.html" title="Đàn Guitar Acoustic Hohner SD65TBK">Đàn Guitar Acoustic Hohner SD65TBK</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 4.950.000 VND</span>
+                        </div>
+                        <a href="guitar-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Product 2-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="guitar-chi-tiet-user.html" title="Đàn Guitar Classic Almansa 424 Abeto Mate G424-AM">
+                            <img src="image/product-img/product-img2.jpg" alt="Đàn Guitar Classic Almansa 424 Abeto Mate G424-AM">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT"><span>NỔI BẬT</span></div>
+                        <h4>
+                            <a href="guitar-chi-tiet-user.html" title="Đàn Guitar Classic Almansa 424 Abeto Mate G424-AM">Đàn Guitar Classic Almansa 424 Abeto Mate G424-AM</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 13.500.000 VND</span>
+                        </div>
+                        <a href="guitar-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Product 3-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="guitar-chi-tiet-user.html" title="Đàn Guitar Acoustic Taylor GS MINI-E BASS">
+                            <img src="image/product-img/product-img3.jpg" alt="Đàn Guitar Acoustic Taylor GS MINI-E BASS">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT"><span>NỔI BẬT</span></div>
+                        <h4>
+                            <a href="guitar-chi-tiet-user.html" title="Đàn Guitar Acoustic Taylor GS MINI-E BASS">Đàn Guitar Acoustic Taylor GS MINI-E BASS</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 18.300.000 VND</span>
+                        </div>
+                        <a href="guitar-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Product 4-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="guitar-chi-tiet-user.html" title="Đàn Guitar Điện Stagg S250SB">
+                            <img src="image/product-img/product-img4.jpg" alt="Đàn Guitar Điện Stagg S250SB">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT" style="float: left;padding-right: 5px;"><span>NỔI BẬT</span></div>
+                        <div class="NEW"><span>MỚI</span></div>
+                        <h4>
+                            <a href="guitar-chi-tiet-user.html" title="Đàn Guitar Điện Stagg S250SB">Đàn Guitar Điện Stagg GE-S250SB</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 2.350.000 VND</span>
+                        </div>
+                        <a href="guitar-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Product 5-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="piano-organ-chi-tiet-user.html" title="Đàn Piano Điện DPP510">
+                            <img src="image/product-img/product-img5.jpg" alt="Đàn Piano Điện DPP510">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT" style="float: left;padding-right: 5px;"><span>NỔI BẬT</span></div>
+                        <div class="NEW"><span>MỚI</span></div>
+                        <h4>
+                            <a href="piano-organ-chi-tiet-user.html" title="Đàn Piano Điện DPP510">Đàn Piano Điện DPP510 (Chính Hãng 100%)</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 12.500.000 VND</span>
+                        </div>
+                        <a href="piano-organ-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Product 6-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="piano-organ-chi-tiet-user.html" title="Đàn Piano Điện Dynatone DPR1650">
+                            <img src="image/product-img/product-img6.jpg" alt="Đàn Piano Điện Dynatone DPR1650">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT"><span>NỔI BẬT</span></div>
+                        <h4>
+                            <a href="piano-organ-chi-tiet-user.html" title="Đàn Piano Điện Dynatone DPR1650">Đàn Piano Điện Dynatone DPR1650</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 17.000.000 VND</span>
+                        </div>
+                        <a href="piano-organ-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Product 7-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="piano-organ-chi-tiet-user.html" title="Đàn Organ điện tử Casio CTK-3200">
+                            <img src="image/product-img/product-img7.jpg" alt="Đàn Organ điện tử Casio CTK-3200">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT"><span>NỔI BẬT</span></div>
+                        <h4>
+                            <a href="piano-organ-chi-tiet-user.html" title="Đàn Piano">Đàn Organ điện tử Casio CTK-3200</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 3.600.000 VND</span>
+                        </div>
+                        <a href="piano-organ-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Product 8-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="piano-organ-chi-tiet-user.html" title="Đàn Organ Kurtzman K200">
+                            <img src="image/product-img/product-img8.jpg" alt="Đàn Organ Kurtzman K200">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT" style="float: left;padding-right: 5px;"><span>NỔI BẬT</span></div>
+                        <div class="NEW"><span>MỚI</span></div>
+                        <h4>
+                            <a href="piano-organ-chi-tiet-user.html" title="Đàn Organ Kurtzman K200">Đàn Organ Kurtzman K200 (Chính Hãng 100%)</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 3.800.000 VND</span>
+                        </div>
+                        <a href="piano-organ-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Product 9-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="ukulele-chi-tiet-user.html" title="Đàn Ukulele Rothenburg RB59 (Full Solid)">
+                            <img src="image/product-img/product-img9.jpg" alt="Đàn Ukulele Rothenburg RB59 (Full Solid)">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT" style="float: left;padding-right: 5px;"><span>NỔI BẬT</span></div>
+                        <div class="NEW"><span>MỚI</span></div>
+                        <h4>
+                            <a href="ukulele-chi-tiet-user.html" title="Đàn Ukulele Rothenburg RB59 (Full Solid)">Đàn Ukulele Rothenburg RB59 (Full Solid)</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 1.100.000 VND</span>
+                        </div>
+                        <a href="ukulele-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Product 10-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="ukulele-chi-tiet-user.html" title="Đàn Ukulele Lanikai LU23">
+                            <img src="image/product-img/product-img10.jpg" alt="Đàn Ukulele Lanikai LU23">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT"><span>NỔI BẬT</span></div>
+                        <h4>
+                            <a href="ukulele-chi-tiet-user.html" title="Đàn Ukulele Lanikai LU23">Đàn Ukulele Lanikai LU23 (Full Solid)</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 1.050.000 VND</span>
+                        </div>
+                        <a href="ukulele-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Product 11-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="ukulele-chi-tiet-user.html" title="Đàn Ukulele Kala Soprano KA-P">
+                            <img src="image/product-img/product-img11.jpg" alt="Đàn Ukulele Kala Soprano KA-P">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT"><span>NỔI BẬT</span></div>
+                        <h4>
+                            <a href="ukulele-chi-tiet-user.html" title="Đàn Ukulele Kala Soprano KA-P">Đàn Ukulele Kala Soprano KA-P</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 750.000 VND</span>
+                        </div>
+                        <a href="ukulele-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Product 12-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="ukulele-chi-tiet-user.html" title="Đàn Ukulele Lanikai Concert LU21 CEBK (Có EQ)">
+                            <img src="image/product-img/product-img12.jpg" alt="Đàn Ukulele Lanikai Concert LU21 CEBK (Có EQ)">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT"><span>NỔI BẬT</span></div>
+                        <h4>
+                            <a href="ukulele-chi-tiet-user.html" title="Đàn Ukulele Lanikai Concert LU21 CEBK (Có EQ)">Đàn Ukulele Lanikai Concert LU21 CEBK (Có EQ)</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 1.400.000 VND</span>
+                        </div>
+                        <a href="ukulele-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Product 13-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="nhac-cu-khac-chi-tiet-user.html" title="Đàn Violin Kapok 2/4-3/4">
+                            <img src="image/product-img/product-img13.jpg" alt="Đàn Violin Kapok 2/4-3/4">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT" style="float: left;padding-right: 5px;"><span>NỔI BẬT</span></div>
+                        <div class="NEW"><span>MỚI</span></div>
+                        <h4>
+                            <a href="nhac-cu-khac-chi-tiet-user.html" title="Đàn Violin Kapok 2/4-3/4">Đàn Violin Kapok 2/4-3/4</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 1.490.000 VND</span>
+                        </div>
+                        <a href="nhac-cu-khac-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Product 14-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="nhac-cu-khac-chi-tiet-user.html" title="Trống Cajon TA6">
+                            <img src="image/product-img/product-img14.jpg" alt="Trống Cajon TA6">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT"><span>NỔI BẬT</span></div>
+                        <h4>
+                            <a href="nhac-cu-khac-chi-tiet-user.html" title="Trống Cajon TA6">Trống Cajon TA6</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 1.200.000 VND</span>
+                        </div>
+                        <a href="nhac-cu-khac-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Product 15-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="nhac-cu-khac-chi-tiet-user.html" title="Đàn Kalimba Gecko 10 Phím K10M">
+                            <img src="image/product-img/product-img15.jpg" alt="Đàn Kalimba Gecko 10 Phím K10M">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT" style="float: left;padding-right: 5px;"><span>NỔI BẬT</span></div>
+                        <div class="NEW"><span>MỚI</span></div>
+                        <h4>
+                            <a href="nhac-cu-khac-chi-tiet-user.html" title="Đàn Kalimba Gecko 10 Phím K10M">Đàn Kalimba Gecko 10 Phím</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 650.000 VND</span>
+                        </div>
+                        <a href="nhac-cu-khac-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Product 16-->
+            <li>
+                <div class="bglipro">
+                    <figure class="product-img">
+                        <a href="nhac-cu-khac-chi-tiet-user.html" title="Bộ Trống Jazz Deviser JZGD22BK">
+                            <img src="image/product-img/product-img16.jpg" alt="Bộ Trống Jazz Deviser JZGD22BK">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <div class="HOT"><span>NỔI BẬT</span></div>
+                        <h4>
+                            <a href="nhac-cu-khac-chi-tiet-user.html" title="Bộ Trống Jazz Deviser JZGD22BK">Bộ Trống Jazz Deviser</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 10.250.000 VND</span>
+                        </div>
+                        <a href="nhac-cu-khac-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--Ket thuc SPNB-->
+    <!--Phụ kiện nổi bật khác-->
+    <div class="phu-kien-noi-bat" id="pknb">
+        <div class="text-spnb">
+            <h2 class="title"><a href="#pknb">Sách | Phụ kiện nổi bật +</a></h2>
+        </div>
+        <ul class="list-product2">
+            <!--Phụ kiện 1-->
+            <li>
+                <div class="bglipro2">
+                    <figure class="product-img">
+                        <a href="sach-phu-kien-chi-tiet-user.html" title="Dây Đeo Đàn Guitar Dunlop D38-33GN">
+                            <img src="image/phukien-img/phukien-img1.jpg" alt="Dây Đeo Đàn Guitar Dunlop D38-33GN">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <h4>
+                            <a href="sach-phu-kien-chi-tiet-user.html" title="Dây Đeo Đàn Guitar Dunlop D38-33GN">Dây Đeo Đàn Guitar Dunlop D38-33GN</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 450.000 VND</span>
+                        </div>
+                        <a href="sach-phu-kien-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Phụ kiện 2-->
+            <li>
+                <div class="bglipro2">
+                    <figure class="product-img">
+                        <a href="sach-phu-kien-chi-tiet-user.html" title="Máy lên dây đàn guitar Stagg CTU-C1-30">
+                            <img src="image/phukien-img/phukien-img2.jpg" alt="Máy lên dây đàn guitar Stagg CTU-C1-30">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <h4>
+                            <a href="sach-phu-kien-chi-tiet-user.html" title="Máy lên dây đàn guitar Stagg CTU-C1-30">Máy Lên Dây Đàn Guitar Stagg</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 150.000 VND</span>
+                        </div>
+                        <a href="sach-phu-kien-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Phụ kiện 3-->
+            <li>
+                <div class="bglipro2">
+                    <figure class="product-img">
+                        <a href="sach-phu-kien-chi-tiet-user.html" title="Bao vải Guitar 1 lớp">
+                            <img src="image/phukien-img/phukien-img3.jpg" alt="Bao vải Guitar 1 lớp">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <h4>
+                            <a href="sach-phu-kien-chi-tiet-user.html" title="Bao vải Guitar 1 lớp">Bao Vải Guitar 1 Lớp Yamaha</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 50.000 VND</span>
+                        </div>
+                        <a href="sach-phu-kien-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Phụ kiện 4-->
+            <li>
+                <div class="bglipro2">
+                    <figure class="product-img">
+                        <a href="sach-phu-kien-chi-tiet-user.html" title="Giá Để Đàn Guitar Chữ A">
+                            <img src="image/phukien-img/phukien-img4.jpg" alt="Giá Để Đàn Guitar Chữ A">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <h4>
+                            <a href="sach-phu-kien-chi-tiet-user.html" title="Giá Để Đàn Guitar Chữ A">Giá Để Đàn Guitar Chữ A</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 150.000 VND</span>
+                        </div>
+                        <a href="sach-phu-kien-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Phụ kiện 5-->
+            <li>
+                <div class="bglipro2">
+                    <figure class="product-img">
+                        <a href="sach-phu-kien-chi-tiet-user.html" title="Capo Guitar/Ukulele B601">
+                            <img src="image/phukien-img/phukien-img5.jpg" alt="Capo Guitar/Ukulele B601">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <h4>
+                            <a href="sach-phu-kien-chi-tiet-user.html" title="Capo Guitar/Ukulele B601">Capo Guitar/Ukulele B601</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 50.000 VND</span>
+                        </div>
+                        <a href="sach-phu-kien-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Phụ kiện 6-->
+            <li>
+                <div class="bglipro2">
+                    <figure class="product-img">
+                        <a href="sach-phu-kien-chi-tiet-user.html" title="Ghế Piano điện Yamaha">
+                            <img src="image/phukien-img/phukien-img6.jpg" alt="Ghế Piano điện Yamaha">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <h4>
+                            <a href="sach-phu-kien-chi-tiet-user.html" title="Ghế Piano điện Yamaha">Ghế Piano Điện Yamaha</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 800.000 VND</span>
+                        </div>
+                        <a href="sach-phu-kien-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Phụ kiện 7-->
+            <li>
+                <div class="bglipro2">
+                    <figure class="product-img">
+                        <a href="sach-phu-kien-chi-tiet-user.html" title="Pickup Guitar Alice QH-6A">
+                            <img src="image/phukien-img/phukien-img7.jpg" alt="Pickup Guitar Alice QH-6A">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <h4>
+                            <a href="sach-phu-kien-chi-tiet-user.html" title="Pickup Guitar Alice QH-6A">Pickup Guitar Alice QH-6A</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 250.000 VND</span>
+                        </div>
+                        <a href="sach-phu-kien-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Phụ kiện 8-->
+            <li>
+                <div class="bglipro2">
+                    <figure class="product-img">
+                        <a href="sach-phu-kien-chi-tiet-user.html" title="Dây Đàn Guitar Acoustic Elixir">
+                            <img src="image/phukien-img/phukien-img8.jpg" alt="Dây Đàn Guitar Acoustic ElixirDây Đàn Guitar Acoustic Elixir">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <h4>
+                            <a href="sach-phu-kien-chi-tiet-user.html" title="Dây Đàn Guitar Acoustic Elixir">Dây Đàn Guitar Acoustic Elixir</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 400.000 VND</span>
+                        </div>
+                        <a href="sach-phu-kien-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Phụ kiện 9-->
+            <li>
+                <div class="bglipro2">
+                    <figure class="product-img">
+                        <a href="sach-phu-kien-chi-tiet-user.html" title="Amply Đàn Guitar Aroma TM-30A">
+                            <img src="image/phukien-img/phukien-img9.jpg" alt="Amply Đàn Guitar Aroma TM-30A">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <h4>
+                            <a href="sach-phu-kien-chi-tiet-user.html" title="Amply Đàn Guitar Aroma TM-30A">Amply Đàn Guitar Aroma TM-30A</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 4.000.000 VND</span>
+                        </div>
+                        <a href="sach-phu-kien-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Phụ kiện 10-->
+            <li>
+                <div class="bglipro2">
+                    <figure class="product-img">
+                        <a href="sach-phu-kien-chi-tiet-user.html" title="Bao Dù Đàn Guitar 6 Lớp">
+                            <img src="image/phukien-img/phukien-img10.jpg" alt="Bao Dù Đàn Guitar 6 Lớp">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <h4>
+                            <a href="sach-phu-kien-chi-tiet-user.html" title="Bao Dù Đàn Guitar 6 Lớp">Bao Dù Đàn Guitar 6 Lớp</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 350.000 VND</span>
+                        </div>
+                        <a href="sach-phu-kien-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Phụ kiện 11-->
+            <li>
+                <div class="bglipro2">
+                    <figure class="product-img">
+                        <a href="sach-phu-kien-chi-tiet-user.html" title="Kê Chân Guitar Stagg FOS-B1">
+                            <img src="image/phukien-img/phukien-img11.jpg" alt="Kê Chân Guitar Stagg FOS-B1">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <h4>
+                            <a href="sach-phu-kien-chi-tiet-user.html" title="Kê Chân Guitar Stagg FOS-B1">Kê Chân Guitar Stagg FOS-B1</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 115.000 VND</span>
+                        </div>
+                        <a href="sach-phu-kien-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Phụ kiện 12-->
+            <li>
+                <div class="bglipro2">
+                    <figure class="product-img">
+                        <a href="sach-phu-kien-chi-tiet-user.html" title="Dây Đàn Acoustic Guitar D'Addario">
+                            <img src="image/phukien-img/phukien-img12.jpg" alt="Dây Đàn Acoustic Guitar D'Addario">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <h4>
+                            <a href="sach-phu-kien-chi-tiet-user.html" title="Dây Đàn Acoustic Guitar D'Addario">Dây Đàn Acoustic Guitar D'Addario</a>
+                        </h4>
+                    </div>
+                    <div style="padding: 0px 10px 0;">
+                        <div class="price-box">
+                            <span>Giá: 160.000 VND</span>
+                        </div>
+                        <a href="sach-phu-kien-chi-tiet-user.html"><button>Xem chi tiết</button></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--Kết thúc phụ kiện nổi bật khác-->
+    <!--Bắt đầu Khóa học nhạc cụ-->
+    <div class="phu-kien-noi-bat" id="khnb" style="height: 440px;">
+        <div class="text-spnb">
+            <h2 class="title"><a href="#khnb">Khóa học nhạc cụ</a></h2>
+        </div>
+        <!--Video demo-->
+        <video width="50%" height="315" class="videocss" controls autoplay loop>
+        <source src="./video/video33.mp4" type="video/mp4">
+        <source src="./video/video33.ogg" type="video/ogg">
+      </video>
+        <ul class="list-khoa-hoc">
+            <!--Khoa hoc-->
+            <li>
+                <div class="bglipro" style="height: 309px;">
+                    <figure class="product-img">
+                        <a href="#" title="KHÓA HỌC ĐÀN GUITAR">
+                            <img src="image/khoahoc-img/khoahoc-img2.png" alt="KHÓA HỌC ĐÀN GUITAR">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <h4>
+                            <a href="#" title="KHÓA HỌC ĐÀN GUITAR">KHÓA HỌC ĐÀN GUITAR</a>
+                        </h4>
+                        <div class="price-box">
+                            <span>Học thử miễn phí</span>
+                        </div>
+                        <p style="font-size: 12px;">Không mất quá nhiều thời gian để học đàn, tự chơi đàn Guitar chỉ sau vài tháng</p>
+                        <a href="#"><button class="khoa-hoc-btn">Học thử</button></a>
+                    </div>
+                </div>
+            </li>
+            <!--Khoa hoc-->
+            <li>
+                <div class="bglipro" style="height: 309px;">
+                    <figure class="product-img">
+                        <a href="#" title="ĐÀO TẠO NHẠC CÔNG">
+                            <img src="image/khoahoc-img/khoahoc-img6.png" alt="ĐÀO TẠO NHẠC CÔNG">
+                        </a>
+                    </figure>
+                    <div class="product-item-info">
+                        <h4>
+                            <a href="#" title="ĐÀO TẠO NHẠC CÔNG">ĐÀO TẠO NHẠC CÔNG</a>
+                        </h4>
+                        <div class="price-box">
+                            <span>Học thử miễn phí</span>
+                        </div>
+                        <p style="font-size: 12px;">Đào tạo nhạc công Piano, Organ, Guitar chuyên nghiệp...</p>
+                        <a href="#"><button class="khoa-hoc-btn">Học thử</button></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--Kết thúc Khóa học nhạc cụ-->
+    <!--Bắt đầu Footer-->
+    <footer id="footer">
+        <div class="container">
+            <ul>
+                <li class="footer1">
+                    <div class="heading">Chính sách</div>
+                    <div class="content-footer">
+                        <ul>
+                            <li><a href="#" rel="nofollow">Chính sách giao hàng</a></li>
+                            <li><a href="#" rel="nofollow">Chính sách bảo hành & đổi trả</a></li>
+                            <li><a href="#" rel="nofollow">Chính sách thanh toán</a></li>
+                            <li><a href="#" rel="nofollow">Chính sách bảo mật thông tin</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="footer1">
+                    <div class="heading">Dịch vụ & hỗ trợ</div>
+                    <div class="content-footer">
+                        <ul>
+                            <li><a href="#" rel="nofollow">An toàn mua bán</a></li>
+                            <li><a href="#" rel="nofollow">Đăng ký cộng tác viên</a></li>
+                            <li><a href="#" rel="nofollow">Câu hỏi thường gặp</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="footer1">
+                    <div class="heading">Thông tin liên hệ</div>
+                    <div class="content-footer">
+                        <div class="social-media">
+                            <a href="#" class="button-facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="button-ggplus"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="button-youtube"><i class="fa fa-youtube"></i></a>
+                        </div>
+                        <span style="font-weight: bold; color: red;">0980.262.203 (Hà Nội)</span>
+                        <span style="font-weight: bold; color: red;">0569.230.562 (Hồ Chí Minh)</span>
+                    </div>
+                </li>
+
+                <li class="footer1">
+                    <div class="heading">Góp ý, phản ánh</div>
+                    <div class="content-footer">
+                        <span style="font-weight: bold; color: red;">0980.262.203 (Hà Nội)</span>
+                        <span style="font-weight: bold; color: red;">0569.230.562 (Hồ Chí Minh)</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Text cuối-->
+    </footer>
+    <!--Kết thúc Footer-->
+
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+
+</html>

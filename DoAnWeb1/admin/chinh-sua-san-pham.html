@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PMP Musical | Quản Trị - Quản Lý Người Dùng</title>
+    <link rel="icon" href="../image/logo.png">
+    <link rel="stylesheet" type="text/css" href="../css/style-admin.css">
+    <link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.css">
+</head>
+
+<body>
+    <header class="header-admin">
+        <div class="container">
+            <a href="thong-ke.html" title="Trang chủ"><img src="../image/logo.png" alt="logo"></a>
+            <a href="#" class="text-admin">Xin chào Quản Trị Viên</a>
+            <a class="dang-xuat" href="index.html">&nbsp;Đăng xuất</a>
+            <i class="fa fa-sign-out"></i>
+            <a class="trang-chu" href="thong-ke.html">&nbsp;Trang chủ</a>
+            <i class="fa fa-home"></i>
+        </div>
+    </header>
+    <div class="main-content" style="height: 740px;">
+        <div class="container">
+            <div class="admin-menu">
+                <h1>Admin Menu</h1>
+                <ul>
+                    <li><a href="quan-ly-san-pham.html"><i class="fa fa-list-ul"></i> Sản phẩm</a></li>
+
+                    <li><a href="quan-ly-don-hang.html"><i class="fa fa-envelope"></i> Đơn hàng</a></li>
+                    <li>
+                        <a href="quan-ly-user.html"> <i class="fa fa-cog"></i> Quản lý người dùng</a>
+                    </li>
+                    <li>
+                        <a href="chinh-sua-thong-tin.html"> <i class="fa fa-user"></i> Chỉnh sửa thông tin cá nhân</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="danh-sach-user" style="height: 740px;">
+                <h1>Chỉnh Sửa Thông Tin Sản Phẩm</h1>
+                <div class="them-sp">
+                    <form>
+                        <label for="name-sp"><b>Tên sản phẩm: </b></label>
+                        <p class="input-addd">Đàn Guitar Acoustic Hohner SD65TBK</p>
+
+                        <label for="name-sp"><b>Tên sản phẩm cập nhật: </b></label>
+                        <input type="text" name="name-sp" id="name-sp" class="input-add" value="Đàn Guitar Acoustic Hohner SD65TBK" required>
+
+                        <label for="name-sp"><b>Mô tả sản phẩm: </b></label>
+                        <p class="input-addd">Là thương hiệu guitar được yêu thích nhất tại thị trường Thái Lan với lượng hàng bán ra lên đến hàng nghìn chiếc mỗi tháng</p>
+
+                        <label for="name-sp"><b>Mô tả sản phẩm cập nhật: </b></label>
+                        <input type="text" name="mo-ta-sp" id="mo-ta-sp" class="input-add" value="Là thương hiệu guitar được yêu thích nhất tại thị trường Thái Lan với lượng hàng bán ra lên đến hàng nghìn chiếc mỗi tháng" required>
+
+                        <label for="name-sp"><b>Giá sản phẩm: </b></label>
+                        <p class="input-addd">4.950.000 VNĐ</p>
+
+                        <label for="name-sp"><b>Giá sản phẩm cập nhật: </b></label>
+                        <input type="text" name="gia-sp" id="gia-sp" class="input-add" value="4.950.000 VNĐ" required>
+
+                        <label for="anh-sp"><b>Ảnh sản phẩm: </b></label>
+                        <img src="../image/product-img/product-img1.jpg" alt="anh-sp" style="width:30%; text-align: center;"><br>
+
+                        <label for="anh-sp"><b>Ảnh sản phẩm cập nhật: </b></label>
+                        <input type="file" name="anh-sp" id="anh-sp" class="input-add" value="Thêm ảnh" value="../image/product-img/product-img1.jpg" required>
+
+                        <a href="quan-ly-san-pham.html"><input type="button" value="Huỷ bỏ" class="huy-bo"></a>
+                        <input type="button" value="Cập nhật" class="add">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fuid">
+        <div class="copyrights">
+            <p> <br> &copy; PMP Musical | Nhạc cụ Online <br></p>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

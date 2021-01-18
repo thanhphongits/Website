@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đăng nhập trang quản trị </title>
+    <link rel="icon" href="../image/logo.png">
+    <link rel="stylesheet" type="text/css" href="../css/style-admin-login.css">
+    <link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-logo">
+                <a href="#" class="logo-img">
+                    <img src="../image/logo.png" alt="Logo">
+                </a>
+            </div>
+        </header>
+        <div class="main-content">
+            <div class="container-f">
+                <div style="margin-left: -15px;
+                margin-right: -15px;">
+                    <div class="container-form">
+                        <div class="form-login">
+                            <div class="heading-login">
+                                <h1 class="heading-title">
+                                    <i class="fa fa-lock"></i> Đăng nhập vào trang quản trị
+                                </h1>
+                            </div>
+                            <div class="body-login">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="input-username">Tên tài khoản</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-user"></i>
+                                                
+                                            </span>
+                                            <input type="text" id="username" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="input-username">Mật khẩu</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                    <i class="fa fa-lock"></i> 
+                                                </span>
+                                            <input type="password" id="password" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="text-right">
+                                        <button class="btn-login" onclick="return checklogin()">
+                                            <i class="fa fa-key"></i>
+                                            Đăng nhập
+                                        </button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checklogin() {
+            var name = "Admin";
+            var username = "admin";
+            var password = "admin";
+
+            var userName = document.getElementById("username").value;
+            var passWord = document.getElementById("password").value;
+
+            if (userName == "" || passWord == "") {
+                if (userName == "") alert("Tên tài khoản không được bỏ trống!");
+                if (passWord == "") alert("Mật khẩu không được bỏ trống!");
+            } else if ((username == userName) && (password == passWord)) {
+
+                alert("Chào mừng " + name + "!");
+                window.location = "thong-ke.html";
+                return false;
+            } else alert("Bạn nhập sai tên tài khoản hoặc mật khẩu !");
+        }
+    </script>
+</body>
+
+</html>

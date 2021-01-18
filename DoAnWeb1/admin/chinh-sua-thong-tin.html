@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PMP Musical | Quản Trị - Quản Lý Người Dùng</title>
+    <link rel="icon" href="../image/logo.png">
+    <link rel="stylesheet" type="text/css" href="../css/style-admin.css">
+    <link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.css">
+</head>
+
+<body>
+    <header class="header-admin">
+        <div class="container">
+            <a href="thong-ke.html" title="Trang chủ"><img src="../image/logo.png" alt="logo"></a>
+            <a href="#" class="text-admin">Xin chào Quản Trị Viên</a>
+            <a class="dang-xuat" href="index.html">&nbsp;Đăng xuất</a>
+            <i class="fa fa-sign-out"></i>
+            <a class="trang-chu" href="thong-ke.html">&nbsp;Trang chủ</a>
+            <i class="fa fa-home"></i>
+        </div>
+    </header>
+    <div class="main-content" style="height: 610px;">
+        <div class="container">
+            <div class="admin-menu">
+                <h1>Admin Menu</h1>
+                <ul>
+                    <li><a href="quan-ly-san-pham.html"><i class="fa fa-list-ul"></i> Sản phẩm</a></li>
+
+                    <li><a href="quan-ly-don-hang.html"><i class="fa fa-envelope"></i> Đơn hàng</a></li>
+                    <li>
+                        <a href="quan-ly-user.html"> <i class="fa fa-cog"></i> Quản lý người dùng</a>
+                    </li>
+                    <li>
+                        <a href="chinh-sua-thong-tin.html"> <i class="fa fa-user"></i> Chỉnh sửa thông tin cá nhân</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="danh-sach-user" style="height: 610px;">
+                <h1>Chỉnh Sửa Thông Tin</h1>
+                <div class="them-sp" style="height: 500px;">
+                    <form>
+                        <label for="name-sp"><b>Họ và tên: </b></label>
+                        <p class="input-addd">Giang Thế Phong</p>
+
+                        <label for="name-sp"><b>Họ và tên cập nhật: </b></label>
+                        <input type="text" name="name-sp" id="name-sp" class="input-add" required>
+
+                        <label for="name-sp"><b>Số điện thoại: </b></label>
+                        <p class="input-addd">0901667314</p>
+
+                        <label for="name-sp"><b>Số điện thoại cập nhật: </b></label>
+                        <input type="text" name="gia-sp" id="gia-sp" class="input-add" required><br><br>
+
+                        <div class="table">
+                            <label for="name-sp" style="margin-top: 0%;"><b>Giới tính:</b></label>
+                            <span>&emsp;</span><input type="radio" name="text" value="1">Nam
+                            <span>&emsp;&emsp;&emsp;&emsp;&emsp;</span><input type="radio" name="text" value="0">Nữ
+                            <span>&emsp;&emsp;&emsp;&emsp;&emsp;<input type="radio" name="text" value="2" checked></span>Khác
+                            <br><br>
+                        </div>
+
+                        <label for="anh-sp"><b>Ảnh đại diện: </b></label>
+                        <img src="../image/user-login-icon.svg" alt="anh-sp" style="width:20%; text-align: center;"><br>
+
+                        <label for="anh-sp"><b>Ảnh đại diện cập nhật: </b></label>
+                        <input type="file" name="anh-sp" id="anh-sp" class="input-add" value="Thêm ảnh" required>
+
+                        <a href="quan-ly-san-pham.html"><input type="button" value="Huỷ bỏ" class="huy-bo"></a>
+                        <input type="button" value="Cập nhật" class="add">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fuid">
+        <div class="copyrights">
+            <p> <br> &copy; PMP Musical | Nhạc cụ Online <br></p>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

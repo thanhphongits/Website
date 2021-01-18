@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>SATISFY - Mỹ phẩm làm đẹp</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/chung.css">
+		<link rel="stylesheet" type="text/css" href="css/sanpham.css">
+		<link href="fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet" />
+		<script src="js/index.js"></script>
+	</head>
+	<body id ="body">
+		<div id ="main">
+			<!--================================= phần head ===================================-->
+			<div id="head">
+				<table id="image-phone">
+						<td><img src="icon/phone4.png" class="image-head"></td>
+						<td>0364117408</td>
+				</table>
+
+				<table id ="image-sale">
+					<td><img src="icon/sale4.png" class="image-head"></td>
+					<td>Giảm giá</td>
+				</table>
+
+				<table id ="image-car">
+					<td><img src="icon/order.png" class="image-head"></td>
+					<td>Kiểm tra đơn hàng</td>
+				</table>
+			</div>
+
+			<!--=============================================phần head-link==================================-->
+			<div id="head-link">
+				<div id="head-link-tren">
+					<a href="index.html" id ="satisfy">SATISFY</a>
+					<form name="thanh-tim-kiem" method="post" action="" enctype="multipart/form-data" id="form_tim_kiem">
+						<input type="text" name = "search1" id="search1" placeholder="Tìm kiếm : halio, okame..." class="input">
+						<button type="button" onClick="addSearch()" id="button1"><img id = "img-search1" src="icon/search2.png"></button>
+					</form>
+					<pre id="dang-nhap"><span name="#" onClick="show_Login()">Đăng nhập</span>/<span name="#" onClick="show_signup()">Đăng kí</span></pre>
+					<!--==============tạo phần hiển thị khách hàng============================ -->
+					<ul id="hien-thi-kh">
+						<p id="member" onclick="to_user()">Nguyễn Ngọc Thiện</p>
+						<ul>
+					<!--		<li name="#">Tài khoản</li>-->
+							<li name="#"  onclick="dx()">Đăng xuất</li>
+						</ul>
+					</ul>
+
+					<acronym title="Giỏ hàng"><img src="icon/icons8-shopping-bag-64.png" id="img-giohang" onclick="xem_gio_hang()"></acronym>
+					<div id="iconsp_in_cart">9</div>
+					<!--==============tạo phần hiển thị khách hàng============================ -->
+					<!--<ul id="hien-thi-kh">
+						<p id="member">Nguyễn Ngọc Thiện</p>
+						<ul>
+							<li name="#">Tài khoản</li>
+							<li name="#"  onclick="dx()">Đăng xuất</li>
+						</ul>
+					</ul>-->
+				</div>
+				<!--===============Hiển thị các loại sản phẩm=============================== -->
+				<table id="head-link-duoi">
+					<td id="hair"><span onclick="chuyentrangsangsp('Tóc')">TÓC</span></td>
+					<td id="trang-diem"><span onclick="chuyentrangsangsp('Trang điểm')">TRANG ĐIỂM</span></td>
+					<td id="duong-da"><span onclick="chuyentrangsangsp('Dưỡng da')">DƯỠNG DA</span></td>
+					<td id="co-the"><span onclick="chuyentrangsangsp('Cơ thể')">CƠ THỂ</span></td>
+					<td id="co-phukien"><span onclick="chuyentrangsangsp('Cọ & Phụ kiện')">CỌ VÀ PHỤ KIỆN</span></td>
+					<td id = "nuoc-hoa"><span onclick="chuyentrangsangsp('Nước hoa')">NƯỚC HOA</span></td>
+				</table>
+			</div>
+			<!--================================================Khung Đăng Nhập=================================-->
+			<div id="login"  onclick="exit(1)">
+				<div id="khung-login" >
+					<div id="khung-login_dki_dn">
+						<button type="button" name="#" id="khung-login_dn">Đăng nhập</button>
+						<button type="button" name="#" id="khung-login_dki" onClick="show_signup()">Đăng kí</button>
+					</div>
+					<form id="login-form" name="dang-nhap" method="post" action="xuly.php" enctype="multipart/form-data">
+						<table>
+							<tr><input name="taikhoan" type="text" placeholder="Tên đăng nhập" class="input-dang-nhap" id = "dn-user"></tr>
+							<tr><span class="chuthich_dn" id="chuthich10"></span></tr>
+							<tr><input name="password" type="password" placeholder="Mật khẩu" class="input-dang-nhap" id="dn-pass"></tr>
+							<tr><span class="chuthich_dn" id="chuthich11"></span></tr>
+						</table>
+						<a href="#"><div id="forget">Quên mật khẩu?</div></a>
+						<input type="reset" name="#" id="huy1" onclick="exit(1)" value="HỦY BỎ">
+						<input type="button" name="#" value="ĐĂNG NHẬP" id="nut-dang-nhap" onclick="ktdn()">
+						<!--
+						<div id="huy1" onclick="exit(1)">HỦY BỎ</div>
+						<div id="nut-dang-nhap" onclick="ktdn()">ĐĂNG NHẬP</div>-->
+					</form>
+				</div>
+			</div>
+
+			<!-- ============================================Khung đăng kí =========================================-->
+			<div id= "signup" onclick="exit(2)">
+				<div id = "khung-signup">
+					<div id="khung-signup_dki_dn">
+						<button type="button" name="#" id="khung-signup_dn" onClick="show_Login()">Đăng nhập</button>
+						<button type="button" name="#" id="khung-signup_dki">Đăng kí</button>
+					</div>
+					<form id="signup-form" name="dang-ki" method="post" action="xuly.php" enctype="multipart/form-data">
+						<table>
+							<tr>
+								<label class="truong">Tên đăng nhập: </label>
+								<input type="dki-taikhoan" name="text" class="input-dki" id = "dki-user">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich1"></span></tr>
+							<tr>
+								<label class="truong">Mật khẩu: </label>
+								<input type="password" name="dki-password" class="input-dki"  id="dki-pass">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich2"></span></tr>
+							<tr>
+								<label class="truong">Nhập lại mật khẩu: </label>
+								<input type="password" name="dki-nhaplaipassword" class="input-dki" id="re-pass">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich3"></span></tr>
+							<tr>
+								<label class="truong">Họ và tên: </label>
+								<input type="text" name="ho-ten" class="input-dki" id="dki-name">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich4"></span></tr>
+							<tr>
+								<label class="truong">Giới tính: </label>
+								<div id="dki_sex">
+									<label><input type="radio" name="sex" id="dki_sex_nam" onclick="dki_muc_sex(1)">Nam</label> 
+									<label><input type="radio" name="sex" id="dki_sex_nu" onclick="dki_muc_sex(2)">Nữ</label> 
+								</div>
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich5"></span></tr>
+							<tr>
+								<label class="truong">Ngày sinh: </label>
+								<input type="date" name="ngay-sinh" class="input-dki" id="dki_born">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich6"></span></tr>
+							<tr>
+								<label class="truong">Số điện thoại: </label>
+								<input type="tell" name="numphone" class="input-dki"  id="dki-phone">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich7"></span></tr>
+							<tr>
+								<label class="truong">Thư điện tử: </label>
+								<input type="email" name="email" class="input-dki" id="dki-email">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich8"></span></tr>
+							<tr>
+								<label class="truong">Địa chỉ: </label>
+								<input type="text" name="dia-chi" class="input-dki" id="dki-address">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich9"></span></tr>
+
+							<input type="reset" name="#" id="huy2" onclick="exit(2)" value="HỦY BỎ">
+							<input type="button" name="#" id = "nut-dang-ki" onclick="ktdk()" value="ĐĂNG KÍ">
+							<!--
+							<div id="huy2" onclick="exit(2)">HỦY BỎ</div>
+							<div id="nut-dang-ki" onclick="ktdk()">ĐĂNG KÍ</div> -->
+						</table>
+					</form>
+				</div>
+			</div>
+			<!--===============================================phần content==================================================-->
+			<div id="content">
+				<div id="danh_muc">
+					<div id = "_danh_muc">Danh mục</div>
+					<div id = "list">
+						<div class="chu1" id="_trang_diem1" onclick="_trang_diem1()"><div class="icon_1" id="_trang_diem1" onclick=""><img src="icon/right.png" id="icon_trang_diem1"></div>Trang điểm</div>
+							<div class="chu2" id="_mắt1" onclick="_maat1()"><div class="icon_1"><img src="icon/right.png" id="icon_mắt1"></div>Mắt</div>
+								<div class="chu3" id="_mắt11" onclick="duyetmang('', '', 'Lót mắt')">Lót mắt</div>
+								<div class="chu3" id="_mắt12" onclick="duyetmang('', '', 'Phấn mắt')">Phấn mắt</div>
+								<div class="chu3" id="_mắt13" onclick="duyetmang('', '', 'Chuốt mi')">Chuốt mi</div>
+								<div class="chu3" id="_mắt14" onclick="duyetmang('', '', 'Kẻ mắt')">Kẻ mắt</div>
+								<div class="chu3" id="_mắt15" onclick="duyetmang('', '', 'Chân mày')">Chân mày</div>
+								<div class="chu3" id="_mắt16" onclick="duyetmang('', '', 'Tẩy trang mắt')">Tẩy trang mắt</div>
+							<div class="chu2" id="_mặt1" onclick="_mat1()"><div class="icon_1"><img src="icon/right.png" id="icon_mặt1"></div>Mặt</div>
+								<div class="chu3" id="_mặt11" onclick="duyetmang('', '', 'Kem lót')">Kem lót</div>
+								<div class="chu3" id="_mặt12" onclick="duyetmang('', '', 'Kem/Phấn nền')">Kem/Phấn nền</div>
+								<div class="chu3" id="_mặt13" onclick="duyetmang('', '', 'Phấn phủ')">Phấn phủ</div>
+								<div class="chu3" id="_mặt14" onclick="duyetmang('', '', 'Phấn má')">Phấn má</div>
+								<div class="chu3" id="_mặt15" onclick="duyetmang('', '', 'Tạo khối')">Tạo khối</div>
+							<div class="chu2" id="_moi1" onclick="_moi_1()"><div class="icon_1"><img src="icon/right.png" id="icon_moi1"></div>Môi</div>
+								<div class="chu3" id="_moi11" onclick="duyetmang('', '', 'Son dưỡng môi & điều trị')">Son dưỡng môi & điều trị</div>
+								<div class="chu3" id="_moi12" onclick="duyetmang('', '', 'Son kem')">Son kem</div>
+								<div class="chu3" id="_moi13" onclick="duyetmang('', '', 'Son bóng')">Son bóng</div>
+								<div class="chu3" id="_moi14" onclick="duyetmang('', '', 'Viền môi')">Viền môi</div>
+						<div class="chu1" id="_duong_da1" onclick="_duong_da1()"><div class="icon_1"><img src="icon/right.png" id="icon_duong_da1"></div>Dưỡng da</div>
+							<div class="chu2" id="_rua_mat1" onclick="_rua_mat1()"><div class="icon_1"><img src="icon/right.png" id="icon_rua_mat1"></div>Rửa mặt</div>
+								<div class="chu3" id="_rua_mat11" onclick="duyetmang('', '', 'Tẩy trang')">Tẩy trang</div>
+								<div class="chu3" id="_rua_mat12" onclick="duyetmang('', '', 'Tẩy da chết')">Tẩy da chết</div>
+								<div class="chu3" id="_rua_mat13" onclick="duyetmang('', '', 'Sữa rửa mặt')">Sữa rửa mặt</div>
+								<div class="chu3" id="_rua_mat14" onclick="duyetmang('', '', 'Dụng cụ rửa mặt')">Dụng cụ rửa mặt</div>
+								<div class="chu3" id="_rua_mat15" onclick="duyetmang('', '', 'Nước hoa hồng')">Nước hoa hồng</div>
+							<div class="chu2" id="_mat_na1" onclick="_mat_na1()"><div class="icon_1"><img src="icon/right.png" id="icon_mat_na1"></div>Mặt nạ</div>
+								<div class="chu3" id="_mat_na11" onclick="duyetmang('', '', 'Mặt Nạ Giấy')">Mặt Nạ Giấy</div>
+								<div class="chu3" id="_mat_na12" onclick="duyetmang('', '', 'Mặt nạ')">Mặt nạ</div>
+							<div class="chu2" id="_duong_am1" onclick="_duong_am1()"><div class="icon_1"><img src="icon/right.png" id="icon_duong_am1"></div>Dưỡng ẩm</div>
+								<div class="chu3" id="_duong_am11" onclick="duyetmang('', '', 'Kem dưỡng')">Kem dưỡng</div>
+								<div class="chu3" id="_duong_am12" onclick="duyetmang('', '', 'Sữa dưỡng')">Sữa dưỡng</div>
+								<div class="chu3" id="_duong_am13" onclick="duyetmang('', '', 'Dầu dưỡng')">Dầu dưỡng</div>
+								<div class="chu3" id="_duong_am14" onclick="duyetmang('', '', 'Dưỡng da vùng mắt')">Dưỡng da vùng mắt</div>
+								<div class="chu3" id="_duong_am15" onclick="duyetmang('', '', 'Dưỡng da vùng cổ')">Dưỡng da vùng cổ</div>
+								<div class="chu3" id="_duong_am16" onclick="duyetmang('', '', 'Xịt khoáng')">Xịt khoáng</div>
+							<div class="chu2" id="_tri_lieu1" onclick="_tri_lieu1()"><div class="icon_1"><img src="icon/right.png" id="icon_tri_lieu1"></div>Trị liệu</div>
+								<div class="chu3" id="_tri_lieu11" onclick="duyetmang('', '', 'Trị mụn')">Trị mụn</div>
+								<div class="chu3" id="_tri_lieu12" onclick="duyetmang('', '', 'Kem lột')">Kem lột</div>
+								<div class="chu3" id="_tri_lieu13" onclick="duyetmang('', '', 'Dưỡng mắt')">Dưỡng mắt</div>
+							<div class="chu2" id="_chong_nang1" onclick="_chong_nang1()"><div class="icon_1"><img src="icon/right.png" id="icon_chong_nang1"></div>Chống nắng</div>
+								<div class="chu3" id="_chong_nang11" onclick="duyetmang('', '', 'Kem chống nắng cho mặt')">Kem chống nắng cho mặt</div>
+								<div class="chu3" id="_chong_nang12" onclick="duyetmang('', '', 'Kem chống nắng cho body')">Kem chống nắng cho body</div>
+						<div class="chu1" id="_co_the1" onclick="_co_the1()"><div class="icon_1"><img src="icon/right.png" id="icon_co_the1"></div>Cơ thể</div>
+							<div class="chu2" id="_duong_the1" onclick="_duong_the1()"><div class="icon_1"><img src="icon/right.png" id="icon_duong_the1"></div>Dưỡng thể</div>
+								<div class="chu3" id="_duong_the11" onclick="duyetmang('', '', 'Kem dưỡng da & dầu')">Kem dưỡng da & dầu</div>
+								<div class="chu3" id="_duong_the12" onclick="duyetmang('', '', 'Dưỡng chân tay')">Dưỡng chân tay</div>
+							<div class="chu2" id="_sua_tam1" onclick="_sua_tam1()"><div class="icon_1"><img src="icon/right.png" id="icon_sua_tam1"></div>Sữa tắm</div>
+								<div class="chu3" id="_sua_tam11" onclick="duyetmang('', '', 'Tẩy da chết')">Tẩy da chết</div>
+								<div class="chu3" id="_sua_tam12" onclick="duyetmang('', '', 'Sữa tắm')">Sữa tắm</div>
+						<div class="chu1" id="_toc1" onclick="_toc1()"><div class="icon_1"><img src="icon/right.png" id="icon_toc1"></div>Tóc</div>
+							<div class="chu2" id="_toc11" onclick="duyetmang('', 'Dầu gội', '')">Dầu gội</div>
+							<div class="chu2" id="_toc12" onclick="duyetmang('', 'Dầu xả', '')">Dầu xả</div>
+							<div class="chu2" id="_toc13" onclick="duyetmang('', 'Dưỡng tóc', '')">Dưỡng tóc</div>
+						<div class="chu1" id="_co1" onclick="_co1()"><div class="icon_1"><img src="icon/right.png" id="icon_co1"></div>Cọ & Phụ kiện</div>
+							<div class="chu2" id="_co11" onclick="duyetmang('', 'Cọ', '')">Cọ</div>
+							<div class="chu2" id="_co12" onclick="duyetmang('', 'Bọt biển', '')">Bọt biển</div>
+						<div class="chu1" onclick="_nuoc_hoa()"><div class="icon_1"><img src="icon/right.png"></div>Nước hoa</div>
+					</div>
+				</div>
+				<div id= "san_pham" >
+					<div id="hien_sp"></div>
+					<div id="list_sp">
+						<div class="khung_sp" id="khung_sp0"></div>
+						<div class="khung_sp" id="khung_sp1"></div>
+						<div class="khung_sp" id="khung_sp2"></div>
+						<div class="khung_sp" id="khung_sp3"></div>
+						<div class="khung_sp" id="khung_sp4"></div>
+						<div class="khung_sp" id="khung_sp5"></div>
+						<div class="khung_sp" id="khung_sp6"></div>
+						<div class="khung_sp" id="khung_sp7"></div>
+						<div class="khung_sp" id="khung_sp8"></div>
+						<div class="khung_sp" id="khung_sp9"></div>
+						<div class="khung_sp" id="khung_sp10"></div>
+						<div class="khung_sp" id="khung_sp11"></div>
+					</div>
+					<div id="phan_trang_sp">
+						<div type="button" id="0" onclick="phantrang(0)">Trước</div>
+						<div type="button" id="1" onclick="phantrang(1)">1</div>
+						<div type="button" id="2" onclick="phantrang(2)">2</div>
+						<div type="button" id="3" onclick="phantrang(3)">3</div>
+						<div type="button" id="4" onclick="phantrang(4)">4</div>
+						<div type="button" id="5" onclick="phantrang(5)">5</div>
+						<div type="button" id="6" onclick="phantrang(6)">6</div>
+						<div type="button" id="7" onclick="phantrang(7)">7</div>
+						<div type="button" id="8" onclick="phantrang(8)">8</div>
+						<div type="button" id="9" onclick="phantrang(9)">9</div>
+						<div type="button" id="10" onclick="phantrang(10)">10</div>
+						<div type="button" id="11" onclick="phantrang(11)">Sau</div>
+					</div>
+					<!--
+					<div id="phan_trang_sp">
+						<button type="button" id="0">Trước</button>
+						<button type="button" id="1">1</button>
+						<button type="button" id="2">2</button>
+						<button type="button" id="3">3</button>
+						<button type="button" id="4">4</button>
+						<button type="button" id="5">5</button>
+						<button type="button" id="6">6</button>
+						<button type="button" id="7">7</button>
+						<button type="button" id="8">8</button>
+						<button type="button" id="9">9</button>
+						<button type="button" id="10">10</button>
+						<button type="button" id="11">Sau</button>
+					</div>-->
+
+				</div>
+				<div id="index_footer">
+					<div id="index_footer_SATISFY">
+						<div id="index_footer_SATISFY_name"><a href="index.html">SATISFY</a></div>
+						<span>www.satisty.com là kênh mua sắm mỹ phẩm, làm đẹp hàng đầu Việt Nam được các beauty blogger lựa chọn để giới thiệu sản phẩm họ yêu thích tới khách hàng, người hâm mộ.</span>
+					</div>
+					<div class="index_footer_danhmuc">
+						<div class="index_footer_danhmuc_ds">Danh mục Sản phẩm</div>
+						<div><span onclick="chuyentrangsangsp('Trang điểm')">Trang điểm</span></div><br>
+						<div><span onclick="chuyentrangsangsp('Tóc')">Tóc</span></div><br>
+						<div><span onclick="chuyentrangsangsp('Dưỡng da')">Dưỡng da</span></div><br>
+						<div><span onclick="chuyentrangsangsp('Cơ thể')">Cơ thể</span></div><br>
+						<div><span onclick="chuyentrangsangsp('Cọ & Phụ kiện')">Cọ & Phụ kiện</span></div><br>
+						<div><span onclick="chuyentrangsangsp('Nước hoa')">Nước hoa</span></div>
+					</div>
+					<div class="index_footer_danhmuc">
+						<div class="index_footer_danhmuc_ds">Thông tin & Hướng dẫn</div>
+						<div>Về SATISFY</div><br>
+						<div>SATISFY Magazine</div><br>
+						<div>SATISFY Community</div><br>
+						<div>SATISFY Coin</div><br>
+						<div>SATISFY Store</div><br>
+						<div>Chính sách và bảo mật</div>
+					</div>
+				</div>
+			</div>
+		</div>
+ 	</body>
+</html>

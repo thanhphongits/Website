@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PMP Musical | Trang Quản Trị</title>
+    <link rel="icon" href="../image/logo.png">
+    <link rel="stylesheet" type="text/css" href="../css/style-admin.css">
+    <link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.css">
+</head>
+
+<body>
+    <header class="header-admin">
+        <div class="container">
+            <a href="thong-ke.html" title="Trang chủ"><img src="../image/logo.png" alt="logo"></a>
+            <a href="#" class="text-admin">Xin chào Quản Trị Viên</a>
+            <a class="dang-xuat" href="index.html">&nbsp;Đăng xuất</a>
+            <i class="fa fa-sign-out"></i>
+            <a class="trang-chu" href="thong-ke.html">&nbsp;Trang chủ</a>
+            <i class="fa fa-home"></i>
+        </div>
+    </header>
+    <div class="main-content" style="height: 680px;">
+        <div class="container">
+            <div class="admin-menu">
+                <h1>Admin Menu</h1>
+                <ul>
+                    <li><a href="quan-ly-san-pham.html"><i class="fa fa-list-ul"></i> Sản phẩm</a></li>
+
+                    <li><a href="quan-ly-don-hang.html"><i class="fa fa-envelope"></i> Đơn hàng</a></li>
+                    <li>
+                        <a href="quan-ly-user.html"> <i class="fa fa-cog"></i> Quản lý người dùng</a>
+                    </li>
+                    <li>
+                        <a href="chinh-sua-thong-tin.html"> <i class="fa fa-user"></i> Chỉnh sửa thông tin cá nhân</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="danh-sach-thong-ke">
+                <h1>Trang Chủ</h1>
+                <div class="loc-thong-ke">
+                </div>
+                <div class="thong-ke-chi-tiet">
+                    <ul>
+                        <li>
+                            <i class="fa fa-shopping-cart" style=" color:#3E99DE"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-comment" style=" color:#F3B93C"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-users" style="color:#3E99DE"></i>
+                        </li>
+                        <li>
+                            <i class="fa fa-search" style=" color:#E07694"></i>
+                        </li>
+                        <li class="so-lieu">120</li>
+                        <li class="so-lieu">52</li>
+                        <li class="so-lieu">24</li>
+                        <li class="so-lieu">25.2k</li>
+                        <li class="thong-tin">ĐƠN HÀNG</li>
+                        <li class="thong-tin">HỎI ĐÁP</li>
+                        <li class="thong-tin">NGƯỜI DÙNG</li>
+                        <li class="thong-tin">LƯỢT TRUY CẬP</li>
+                    </ul>
+                </div>
+                <div id="piechart">
+                </div>
+                <script type="text/javascript" src="../js/loader.js"></script>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fuid">
+        <div class="copyrights">
+            <p> <br> &copy; PMP Musical | Nhạc cụ Online <br></p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Guitar', 8],
+                ['Piano', 6],
+                ['Organ', 5],
+                ['Ukulele', 2],
+                ['Phụ Kiện', 2]
+            ]);
+
+            // Optional; add a title and set the width and height of the chart
+            var options = {
+                'title': '',
+                'width': 600,
+                'height': 400
+            };
+
+            // Display the chart inside the <div> element with id="piechart"
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

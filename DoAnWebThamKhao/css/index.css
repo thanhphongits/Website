@@ -1,0 +1,437 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*#img-search1:hover{
+	background-color: aqua;
+}*/
+
+/*========================================phần ảnh==================================================*/
+
+#img-js{
+	margin-top:0px;
+/*	margin-top: 150px;*/
+	width: 100%;
+	height: 500px;
+	float: left;
+	position: relative;
+}
+
+
+#button-1{
+	width: 2%;
+	padding: 0%;
+	height: 25px;
+	bottom: 0%;
+	left: 34%;
+	text-transform: uppercase;
+	border-radius:50%;
+	background-color: azure;
+	position: absolute;
+}
+
+#button-2{
+	width: 2%;
+	padding: 0%;
+	height: 25px;
+	bottom: 20%;
+	left: 48%;
+	bottom: 0%;
+	text-transform: uppercase;
+	border-radius:50%;
+	background-color:azure;
+	position: absolute;
+}
+
+#button-3{
+	width: 2%;
+	padding: 0%;
+	height: 25px;
+	bottom: 0%;
+	left: 61%;
+	text-transform: uppercase;
+	border-radius:50%;
+	background-color: azure;
+	position: absolute;
+}
+
+#img-1{
+	height: 500px;
+	width:100%;
+	z-index: 4;
+}
+
+#dot1{
+	width: 1%;
+	height: 12px;
+	border-radius: 50%;
+	background-color: white;
+	border: 1px solid black;
+	position: absolute;
+	left: 46%;
+	bottom: 1%;
+	display: none;
+	cursor: pointer;
+}
+
+#dot2{
+	width: 1%;
+	height: 12px;
+	border-radius: 50%;
+	background-color: black;
+	border: 1px solid black;
+	position: absolute;
+	left: 48%;
+	bottom: 1%;
+	display: none;
+	cursor: pointer;
+}
+#dot3{
+	width: 1%;
+	height: 12px;
+	border-radius: 50%;
+	background-color: black;
+	border: 1px solid black;
+	position: absolute;
+	left: 50%;
+	bottom: 1%;
+	display: none;
+	cursor: pointer;
+}
+#dot4{
+	width: 1%;
+	height: 12px;
+	border-radius: 50%;
+	background-color: black;
+	border: 1px solid black;
+	position: absolute;
+	left: 52%;
+	bottom: 1%;
+	display: none;
+	cursor: pointer;
+}
+#dot5{
+	width: 1%;
+	height: 12px;
+	border-radius: 50%;
+	background-color: black;
+	border: 1px solid black;
+	position: absolute;
+	left: 54%;
+	bottom: 1%;
+	display: none;
+	cursor: pointer;
+}
+
+#img-js:hover #dot1{
+	display: block;
+}
+
+#img-js:hover #dot2{
+	display: block;
+}
+
+#img-js:hover #dot3{
+	display: block;
+}
+
+#img-js:hover #dot4{
+	display: block;
+}
+
+#img-js:hover #dot5{
+	display: block;
+}
+
+#img-left{
+	width: 5%;
+	height: 110px;
+	left: 0%;
+	bottom: 40%;
+	position: absolute;
+	opacity: 0.7;
+	display: none;
+	cursor: pointer;
+}
+
+#img-right{
+	width: 5%;
+	height: 110px;
+	right: 0%;
+	bottom: 40%;
+	position: absolute;
+	opacity: 0.7;
+	display: none;
+	cursor: pointer;
+}
+
+#img-js:hover #img-left{
+	display: block;
+}
+
+#img-js:hover #img-right{
+	display: block;
+}
+/*=======================================phần nội dung=============================================*/
+
+#content{
+	margin-top: 0;
+	width: 100%;
+	height: 1000px;
+	float:left;
+}
+
+.content_title{
+	float: left;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 2%;
+	font-size: 170%;
+}
+
+
+.lk_sp{
+	float: left;
+	width: 95%;
+	margin-left: 4%;
+	position: relative;
+}
+
+.khung_sp{
+	float: left;
+	margin-left: 1.5px;
+	margin-right: 1.5px;
+	margin-bottom: 1px;
+	width: 19%;
+	height: 297px;
+	cursor: pointer;
+	overflow: hidden;
+	background-color: #e4e4dd;
+	position: relative;
+}
+
+.khung_sp:hover{
+/*	border: 1px solid #716d6d;*/
+	box-shadow: 0px 0px 12px;
+	transition: 0.2s;
+}
+
+
+.khung_sp img{
+	padding-top: 3%;
+	width: 99.1%;
+	height: 50%;
+}
+
+.san_pham_phan_chu{
+	margin: 5%;
+	margin-top: 2%;
+	width: 95%;
+	height: 50%;
+	padding-bottom:3%;
+}
+
+.san_pham_phan_chu > p{
+	margin-top: 1.5%;
+}
+
+.sanpham_icon_them{
+	right: 0%;
+	top: 0%;
+	height: 30px;
+	width: 12%;
+	background-color: none;
+	position: absolute;
+	cursor: pointer;
+}
+
+.sanpham_icon_them:hover{
+	box-shadow: 0px 0px 12px;
+}
+
+.sanpham_icon_them img{
+	width: 100%;
+	height: 100%;
+}
+
+
+/*=========================sản phẩm bán chạy=====================*/
+
+.dot1{
+	width: 1%;
+	height: 12px;
+	border-radius: 50%;
+	background-color: white;
+	border: 1px solid black;
+	position: absolute;
+	left: 46%;
+	bottom: 1%;
+	display: none;
+	cursor: pointer;
+}
+
+.dot2{
+	width: 1%;
+	height: 12px;
+	border-radius: 50%;
+	background-color: black;
+	border: 1px solid black;
+	position: absolute;
+	left: 48%;
+	bottom: 1%;
+	display: none;
+	cursor: pointer;
+}
+.dot3{
+	width: 1%;
+	height: 12px;
+	border-radius: 50%;
+	background-color: black;
+	border: 1px solid black;
+	position: absolute;
+	left: 50%;
+	bottom: 1%;
+	display: none;
+	cursor: pointer;
+}
+.dot4{
+	width: 1%;
+	height: 12px;
+	border-radius: 50%;
+	background-color: black;
+	border: 1px solid black;
+	position: absolute;
+	left: 52%;
+	bottom: 1%;
+	display: none;
+	cursor: pointer;
+}
+.dot5{
+	width: 1%;
+	height: 12px;
+	border-radius: 50%;
+	background-color: black;
+	border: 1px solid black;
+	position: absolute;
+	left: 54%;
+	bottom: 1%;
+	display: none;
+	cursor: pointer;
+}
+
+.lk_sp:hover .dot1{
+	display: block;
+}
+
+.lk_sp:hover .dot2{
+	display: block;
+}
+
+.lk_sp:hover .dot3{
+	display: block;
+}
+
+.lk_sp:hover .dot4{
+	display: block;
+}
+
+.lk_sp:hover .dot5{
+	display: block;
+}
+
+.img_left{
+	width: 5%;
+	height: 110px;
+	left: 0%;
+	top: 30%;
+	bottom: 40%;
+	position: absolute;
+	display: none;
+	cursor: pointer;
+	background-color: black;
+	color: white;
+	font-size: 300%;
+}
+
+.img_right{
+	width: 5%;
+	height: 110px;
+	top: 30%;
+	right: 3.9%;
+	bottom: 40%;
+	position: absolute;
+	display: none;
+	cursor: pointer;
+	background-color: black;
+	color: white;
+	font-size: 300%;
+}
+
+.lk_sp:hover .img_left{
+	display: block;
+}
+
+.lk_sp:hover .img_right{
+	display: block;
+}
+
+/*======================footer============================*/
+#index_footer{
+	width: 100%;
+	height: 400px;
+	float: left;
+	margin-top:2%;
+	background-color: black;
+	color: #bbbbbb;
+}
+
+#index_footer_SATISFY{
+	float: left;
+	width: 25%;
+	height: 75%;
+	margin-left: 10%;
+	margin-top: 2.5%;
+	/*background-color: violet;*/
+}
+
+#index_footer_SATISFY_name > a{
+	color:#bbbbbb;
+	text-decoration: none;
+}
+
+#index_footer_SATISFY_name{
+	float: left;
+	width: 90%;
+	height: 80px;
+	font-size: 300%;
+	font-weight: bold;
+	overflow: hidden;
+/*	background-color: #7e7abb;*/
+}
+
+.index_footer_danhmuc{
+	float: left;
+	width: 25%;
+	height: 75%;
+	margin-top: 2.5%;
+	margin-left: 2.5%;
+}
+
+.index_footer_danhmuc_ds{
+	float: left;
+	width: 100%;
+	height: 64px;
+	font-size: 150%;
+	font-weight: bold;
+	padding-top: 6%;
+	overflow: hidden;
+}
+
+#index_footer_info{
+	float: left;
+	width: 25%;
+	height: 75%;
+	margin-top: 2.5%;
+	margin-left: 2.5%;
+}

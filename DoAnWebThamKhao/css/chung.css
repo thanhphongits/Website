@@ -1,0 +1,647 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	text-decoration: none;
+	padding: 0px;
+	margin: 0px;
+	border: 0px; 
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: red;
+  background: #c1c1bd;
+}
+
+::selection {
+  color: red;
+  background: #c1c1bd;
+}
+
+#body{
+	font-family: avenir-next-regular;
+	font-family: "Consolas";
+	font-size: 15px;
+	font-weight: normal;
+}
+
+/*===========================================phần main==============================================*/
+#main{
+	width: 100%;
+	height: 1000px;
+    padding-bottom: 0%;
+	padding-left: 0%;
+	padding-right: 0%;
+	padding-top: 0%;
+	margin: 0 0 0 0;
+}
+
+/*===========================================phần head==============================================*/
+#head{
+/*	position: fixed;*/
+	width: 100%;
+	height: 50px;
+	background-color: black;
+	overflow: hidden;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	color: white;
+	z-index: 2;
+	float: left;
+}
+
+.image-head{
+	width: 30px;
+	height: 30px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+#image-phone{
+	float: left;
+	margin-left: 4%;
+}
+
+#image-sale{
+	float: right;
+	margin-right: 5%;
+}
+
+#image-car{
+	float: right;
+	margin-right: 5%;
+}
+
+/*======================================phần head-link=============================================*/
+
+#head-link{
+/*	margin-top:50px;*/
+/*	position: fixed;*/
+	margin-top:0px;
+	width: 100%;
+	height: 100px;
+	z-index: 1;
+	background-color: rgb(0, 0, 0, 0.5);
+	color:antiquewhite;
+	opacity: 1;
+	overflow: auto;
+	float: left;
+	overflow: hidden;
+}
+
+#iconsp_in_cart{
+	right: 2%;
+	top: 20%;
+	height: 17px;
+	width: 1.5%;
+	background-color: black;
+	position: absolute;
+	z-index: 5;
+	border-radius: 50px;
+	padding-top: 0.3%;
+	text-align: center;
+	font-size: 70%;
+	display: none;
+	overflow: hidden;
+}
+
+/*=================================phần head-link-tren=============================================*/
+#head-link-tren{
+	float: left;
+	width: 100%;
+	height: 68px;
+	position: relative;
+	float: left;
+}
+
+
+#satisfy{
+	float :left;
+	width: 11%;
+	margin-left: 7.5%;
+	margin-top: 2%;
+	font-size: 185%;
+	color:antiquewhite;
+}
+
+#satisfy:hover{
+	color: darkred;
+}
+
+#form_tim_kiem{
+	float: left;
+	width: 50%;
+	margin-top: 1.5%;
+	height: 43px;
+}
+
+#search1{
+	width: 84%;
+	margin-top: 0%;
+	height: 60%;
+}
+
+.input[type="text"]{
+	background-repeat: no-repeat;
+	margin-left: 2%;
+	margin-top: 1.6%;
+	color: black;
+	width: 44.5%;
+	box-sizing: content-box;
+	border: 1px solid black;
+	border-radius: 8px;
+	outline: none;
+	padding: 1%;
+	float :left;
+}
+
+#button1{
+	width: 8%;
+	height: 41px;
+	margin-top: 0%;
+	margin-bottom: 0.5%;
+	border: 1px solid #D8D0D1;
+	border-radius: 5px;
+	font-weight: bold;
+	float: left;
+}
+
+#button1:hover{
+	background-color:blue;
+}
+
+#img-giohang{
+	margin-top: 1.8%;
+	width: 3%;
+	height: 50%;
+	float: left;
+	margin-left: 1%;
+	cursor: pointer;
+}
+
+#dang-nhap{
+	width: 20%;
+	height: 40%;
+	margin-left: 5%;
+	margin-top: 2.4%;
+	margin-bottom: 1%;
+	font-size: 120%;
+	font-weight:normal;
+	float : left;
+	display: block;
+}
+
+#dang-nhap span{
+	cursor: pointer;
+}
+
+#dang-nhap span:hover{
+	color: darkred;
+}
+
+#hien-thi-kh{
+	padding-left: 1%;
+	width: 18%;
+	height: 50%;
+	margin-left: 5%;
+	margin-top: 2.4%;
+	margin-bottom: 1%;
+	font-size: 110%;
+	float : left;
+	display: none;
+}
+
+#hien-thi-kh li{
+	padding-left: 3%;
+	padding-top: 13%;
+	color: black;
+	float: left;
+	text-align: left;
+	font-size: 90%;
+	font-weight: 550;
+	height: 33px;
+	width: 300%;
+	display: none;
+	background-color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#hien-thi-kh li:hover{
+	color: red;
+	background-color: rgb(253, 216, 53);
+	box-shadow: 2px 2px 6px;
+}
+
+#hien-thi-kh:hover li{
+	display: block;
+}
+
+#hien-thi-kh ul{
+	position: absolute;
+}
+
+#img-search1{
+	margin-left: 4%;
+	margin-top: 6%;
+	width: 50%;
+	
+}
+
+#member{
+	cursor: pointer;
+	border-bottom: 2px solid black;
+}
+
+#member:hover{
+	color: red;
+}
+
+/*=======================================head-link duoi============================================*/
+#head-link-duoi{
+	width: 100%;
+	height: 31.3%;
+	margin-top: 2%;
+	overflow: hidden;
+}
+
+#head-link-duoi span{
+	padding-left: 1%;
+	cursor: pointer;
+}
+
+#head-link-duoi span:hover{
+	color: darkred;
+}
+
+#hair{
+	margin-left: 8%;
+	height: 100%;
+	float: left;
+	width: 8%;
+	font-size: 100%;
+}
+
+#trang-diem{
+	margin-left: 6%;
+	float: left;
+	width: 10%;
+	height: 100%;
+	font-size: 100%;
+}
+
+#duong-da{
+	margin-left: 7%;
+	float: left;
+	width: 10%;
+	height: 100%;
+	font-size: 100%;
+}
+
+#co-the{
+	margin-left: 4%;
+	float: left;
+	width: 10%;
+	height: 100%;
+	font-size: 100%;
+}
+
+#co-phukien{
+	margin-left: 4%;
+	float: left;
+	height: 100%;
+	width: 16%;
+	font-size: 100%;
+}
+
+#nuoc-hoa{
+	margin-left: 4%;
+	float: left;
+	height: 100%;
+	width: 10%;
+	font-size: 100%;
+}
+
+
+/*======================================Khung Đăng Nhập============================================*/
+
+#login{
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color:rgb(0, 0, 0,0.7);
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+	z-index: 101;
+}
+
+#khung-login{
+	width: 40%;
+	height: 260px;
+	overflow: hidden;
+	margin-top: 200px;
+	margin-left: 30%;
+	background-color:rgb(193, 188, 188);
+	float: left;
+	border-radius: 5px;
+}
+
+#khung-login_dki_dn{
+	float: left;
+	width: 96%;
+	height: 34px;
+	color: black;
+	margin: 2%;
+	margin-bottom: 0%;
+	text-align: center;
+	font-size: 200%;
+}
+
+#khung-login_dn{
+	float: left;
+	width: 39%;
+	height: 100%;
+	margin-left: 12%;
+	font-size: 80%;
+	font-weight: bold;
+	background-color: #c1c1bd;
+	border-bottom: 5px solid blue;
+}
+
+#khung-login_dki{
+	float: left;
+	width: 39%;
+	height: 100%;
+	margin-left: 1%;
+	font-size: 80%;
+	font-weight: bold;
+	background-color: #c1c1bd;
+	border-bottom: 5px solid #c1c1bd;
+}
+
+#khung-login_dki:hover{
+	border-bottom: 5px solid blue;
+}
+
+.input-dang-nhap{
+	float: left;
+	margin-left: 5%;
+	margin-top: 2%;
+	width: 90%;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid black;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+#forget{
+	float:right;
+	margin: 0%;
+	color:rgba(0,0,0,0.7);
+	width: 30%;
+}
+
+#forget:hover{
+	color: red;
+	font-weight: bold;
+}
+
+#huy1{
+	float: left;
+	width: 30%;
+	height: 50px;
+	background-color: darkred;
+	margin-left: 10%;
+	margin-top: 7%;
+	text-align: center;
+	font-size: 120%;
+	font-weight: bold;
+	padding-top: 1%;
+	border-radius: 5px;
+	border: 1% solid black;
+	color: white;
+	cursor: pointer;
+}
+
+#huy1:hover{
+	background-color: blue;
+}
+
+#nut-dang-nhap{
+	float: right;
+	width: 30%;
+	height: 50px;
+	background-color: green;
+	margin-right: -22%;
+	margin-top: 7%;
+	text-align: center;
+	font-size: 120%;
+	font-weight: bold;
+	padding-top: 1%;
+	border-radius: 5px;
+	border: 1% solid black;
+	color: white;
+	cursor: pointer;
+}
+
+#nut-dang-nhap:hover{
+	background-color: blue;
+}
+
+/*==============================================Khung đăng kí==============================================*/
+
+#signup{
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color:rgb(0, 0, 0,0.7);
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+	z-index: 100;
+}
+
+#khung-signup{
+	width: 50%;
+	height: 582px;
+	overflow: hidden;
+	margin-top: 43px;
+	margin-left: 25%;
+	background-color:rgb(193, 188, 188);
+	float: left;
+	border-radius: 5px;
+}
+
+#khung-signup_dki_dn{
+	float: left;
+	margin-bottom: 1%;
+	height: 30px;
+	width: 100%;
+}
+
+#khung-signup_dki{
+	float: left;
+	width: 30%;
+	height: 90%;
+	background-color: #c1c1bd;
+	margin-left: 1%;
+	margin-top: 1%;
+	text-align: center;
+	font-size: 120%;
+	font-weight: bold;
+	padding-top: 0%;
+	border: 1% solid black;
+	color: black;
+	cursor: pointer;
+	border-bottom: 5px solid blue;
+}
+
+#khung-signup_dn:hover{
+	border-bottom: 5px solid blue;
+}
+
+#khung-signup_dn{
+	float: left;
+	background-color: #c1c1bd;
+	width: 30%;
+	height: 90%;
+	margin-left: 30.5%;
+	margin-top: 1%;
+	text-align: center;
+	font-size: 120%;
+	font-weight: bold;
+	padding-top: 0%;
+	border-bottom: 5px solid #c1c1bd;
+	color: black;
+	cursor: pointer;
+}
+
+.input-dki{
+	float: right;
+	margin-right: 2%;
+	margin-top: 1%;
+	width: 67%;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid black;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+#dki_sex{
+	float: right;
+	margin-right: 3.5%;
+	margin-top: 2.2%;
+	width: 67%;
+	height: 30px;
+	border-radius: 5px;
+	border: 0px solid black;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+#dki_sex label{
+	float: left;
+	width: 20%;
+	height: 100%;
+	margin-left: 0%;
+}
+
+#dki_sex_nam{
+	float: left;
+	margin-left: 1%;
+	height: 56%;
+	width: 35%;
+}
+
+#dki_sex_nu{
+	float: left;
+	margin-left: 1%;
+	height: 56%;
+	width: 35%;
+}
+
+#huy2{
+	float: left;
+	width: 26%;
+	height: 48px;
+	background-color: darkred;
+	margin-left: 10%;
+	margin-top: 2.5%;
+	text-align: center;
+	font-size: 120%;
+	font-weight: bold;
+	padding-top: 1%;
+	border-radius: 5px;
+	border: 1% solid black;
+	color: white;
+	cursor: pointer;
+}
+
+#huy2:hover{
+	background-color: blue;
+}
+
+#nut-dang-ki{
+	float: right;
+	width: 26%;
+	height: 48px;
+	background-color: green;
+	margin-right: 10%;
+	margin-top: 2.5%;
+	text-align: center;
+	font-size: 120%;
+	font-weight: bold;
+	padding-top: 1%;
+	border-radius: 5px;
+	border: 1% solid black;
+	color: white;
+	cursor: pointer;
+}
+
+#nut-dang-ki:hover{
+	background-color: blue;
+}
+
+.chuthich_dn{
+	text-align: right;
+	color: red;
+	float: right;
+	padding-right: 2%;
+	margin-top: 0.5%;
+	width: 90%;
+	height: 13px;
+	border-radius: 5px;
+	border: 0px solid black;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.chuthich_dk{
+	text-align: right;
+	color: red;
+	float: right;
+	padding-right: 2%;
+	margin-top: -0.5%;
+	width: 90%;
+	height: 13px;
+	border-radius: 5px;
+	border: 0px solid black;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.truong{
+	float: left;
+	margin-left: 2%;
+	margin-top: 2%;
+	width: 25%;
+	height: 30px;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 15px;
+}

@@ -1,0 +1,258 @@
+.Wrapper {
+    width: 100%;
+    min-height: 690px;
+}
+
+.text-lien-ket {
+    padding: 25px 0;
+    margin-top: 55px;
+    margin-bottom: 10px;
+}
+
+.text-lien-ket ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.text-lien-ket ul li {
+    float: left;
+    padding-right: 10px;
+}
+
+.fa-angle-right {
+    color: #008fd5;
+}
+
+.text-lien-ket a {
+    color: #008fd5;
+}
+
+.menu-left {
+    width: 250px;
+    padding-right: 0;
+    padding-left: 0;
+    float: left;
+    margin-right: 10px;
+    padding-bottom: 20px;
+}
+
+.menu-left .profiles {
+    background: 0 0;
+    color: #fff;
+    padding: 10px 5px 5px;
+}
+
+.menu-left .profiles .image {
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.menu-left .profiles .name {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #242424;
+    margin-top: 5px;
+    font-family: Roboto;
+    font-weight: 300;
+}
+
+.menu-left .profiles h6 {
+    margin: 0;
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    color: #242424;
+    float: left;
+}
+
+.menu-dropdown {
+    margin-top: 0;
+    position: relative;
+}
+
+.menu-dropdown ul.dropdown-menu {
+    list-style: none;
+    background: 0 0;
+    border: none;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    box-shadow: none;
+    top: 100%;
+    left: 0;
+    padding: 5px 0;
+    font-size: 14px;
+    text-align: left;
+    border-radius: 4px;
+    float: left;
+    margin-top: 13px;
+}
+
+.menu-dropdown ul li {
+    float: left;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    padding-left: 0;
+    border-bottom: 1px solid #333;
+}
+
+.menu-dropdown ul li:hover {
+    background: #ececec;
+}
+
+.active {
+    background: #ececec;
+}
+
+.menu-dropdown ul li a {
+    font-size: 15px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    text-align: left;
+    padding-left: 60px;
+}
+
+.content-right {
+    width: 975px;
+    float: left;
+    margin-left: 5px;
+}
+
+.content-right h1 {
+    margin-bottom: 15px;
+    font-family: Roboto;
+    font-size: 19px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    color: #242424;
+}
+
+.content-right .content-main {
+    margin-bottom: 20px;
+    width: 100%!important;
+    padding: 30px 20px 20px!important;
+    background: #fff;
+    border-radius: 4px;
+    height: 480px;
+}
+
+.content-right .content-main label {
+    font-size: 14px;
+    float: left;
+    width: 20%;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+.content-right .content-main input {
+    padding: 0;
+    margin: 0;
+    width: 405px;
+    border-radius: 3px;
+    height: 32px;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 6px 12px;
+    background-color: #fff;
+}
+
+.content-right .content-main input[type=radio] {
+    width: 13px;
+    margin-left: 100px;
+}
+
+.form-control {
+    float: left;
+    padding: 6px 12px;
+}
+
+button.btn-update {
+    border: none;
+    padding: 6px 12px;
+    width: 176px;
+    height: 40px;
+    border-radius: 4px;
+    color: #4a4a4a;
+    font-size: 14px;
+    background-color: #fdd835;
+    margin-top: 26%;
+    margin-left: -43%;
+}
+
+table thead tr th {
+    min-width: 130px;
+    color: rgb(120, 120, 120);
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    padding: 20px 15px;
+}
+
+table tbody tr td {
+    font-size: 13px;
+    line-height: 20px;
+    color: rgb(51, 51, 51);
+    min-width: 130px;
+    font-weight: 400;
+    text-align: left;
+    padding: 20px 15px;
+}
+
+table tbody tr td a {
+    color: blue;
+}
+
+.dia-chi {
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 10px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 4px;
+    border: none;
+}
+
+.dia-chi .dia-chi-body {
+    padding: 17px;
+}
+
+.dia-chi .dia-chi-body .name {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #242424;
+    text-transform: uppercase;
+}
+
+.dia-chi .dia-chi-body .name span {
+    display: inline-block;
+    font-size: 12px;
+    color: #26bc4e;
+    text-transform: none;
+    font-weight: 400;
+    position: relative;
+    padding-left: 25px;
+}
+
+.dia-chi .dia-chi-body .address {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #242424;
+    font-weight: 400;
+}
+
+.dia-chi .dia-chi-body .phone {
+    font-size: 13px;
+    margin-bottom: 0;
+}

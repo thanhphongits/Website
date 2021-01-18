@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>SATISFY - Mỹ phẩm làm đẹp</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/admin.css">
+		<link rel="stylesheet" href="css/chung.css">
+		<link href="fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet" />
+		<script src="js/index.js"></script>
+	</head>
+	<body id ="body">
+		<div id ="main">
+			<!--================================= phần head ===================================-->
+			<div id="head">
+				<table id="image-phone">
+						<td><img src="icon/phone4.png" class="image-head"></td>
+						<td>0364117408</td>
+				</table>
+
+				<table id ="image-sale">
+					<td><img src="icon/sale4.png" class="image-head"></td>
+					<td>Giảm giá</td>
+				</table>
+
+				<table id ="image-car">
+					<td><img src="icon/order.png" class="image-head"></td>
+					<td>Kiểm tra đơn hàng</td>
+				</table>
+			</div>
+
+			<!--=============================================phần head-link==================================-->
+			<div id="head-link">
+				<div id="head-link-tren">
+					<a href="index.html" id ="satisfy">SATISFY</a>
+					<form name="thanh-tim-kiem" method="post" action="" enctype="multipart/form-data" id="form_tim_kiem">
+						<input type="text" name = "search1" id="search1" placeholder="Tìm kiếm : halio, okame..." class="input">
+						<button type="button" onClick="addSearch()" id="button1"><img id = "img-search1" src="icon/search2.png"></button>
+					</form>
+					<pre id="dang-nhap"><span name="#" onClick="show_Login()">Đăng nhập</span>/<span name="#" onClick="show_signup()">Đăng kí</span></pre>
+					<!--==============tạo phần hiển thị khách hàng============================ -->
+					<ul id="hien-thi-kh">
+						<p id="member" onclick="to_user()">Nguyễn Ngọc Thiện</p>
+						<ul>
+					<!--		<li name="#">Tài khoản</li>-->
+							<li name="#"  onclick="dx()">Đăng xuất</li>
+						</ul>
+					</ul>
+
+					<acronym title="Giỏ hàng"><img src="icon/icons8-shopping-bag-64.png" id="img-giohang" onclick="xem_gio_hang()"></acronym>
+					<div id="iconsp_in_cart">9</div>
+					<!--==============tạo phần hiển thị khách hàng============================ -->
+					<!--<ul id="hien-thi-kh">
+						<p id="member">Nguyễn Ngọc Thiện</p>
+						<ul>
+							<li name="#">Tài khoản</li>
+							<li name="#"  onclick="dx()">Đăng xuất</li>
+						</ul>
+					</ul>-->
+				</div>
+				<!--===============Hiển thị các loại sản phẩm=============================== -->
+				<table id="head-link-duoi">
+					<td id="hair"><span onclick="chuyentrangsangsp('Tóc')">TÓC</span></td>
+					<td id="trang-diem"><span onclick="chuyentrangsangsp('Trang điểm')">TRANG ĐIỂM</span></td>
+					<td id="duong-da"><span onclick="chuyentrangsangsp('Dưỡng da')">DƯỠNG DA</span></td>
+					<td id="co-the"><span onclick="chuyentrangsangsp('Cơ thể')">CƠ THỂ</span></td>
+					<td id="co-phukien"><span onclick="chuyentrangsangsp('Cọ & Phụ kiện')">CỌ VÀ PHỤ KIỆN</span></td>
+					<td id = "nuoc-hoa"><span onclick="chuyentrangsangsp('Nước hoa')">NƯỚC HOA</span></td>
+				</table>
+			</div>
+			<!--================================================Khung Đăng Nhập=================================-->
+			<div id="login"  onclick="exit(1)">
+				<div id="khung-login" >
+					<div id="khung-login_dki_dn">
+						<button type="button" name="#" id="khung-login_dn">Đăng nhập</button>
+						<button type="button" name="#" id="khung-login_dki" onClick="show_signup()">Đăng kí</button>
+					</div>
+					<form id="login-form" name="dang-nhap" method="post" action="xuly.php" enctype="multipart/form-data">
+						<table>
+							<tr><input name="taikhoan" type="text" placeholder="Tên đăng nhập" class="input-dang-nhap" id = "dn-user"></tr>
+							<tr><span class="chuthich_dn" id="chuthich10"></span></tr>
+							<tr><input name="password" type="password" placeholder="Mật khẩu" class="input-dang-nhap" id="dn-pass"></tr>
+							<tr><span class="chuthich_dn" id="chuthich11"></span></tr>
+						</table>
+						<a href="#"><div id="forget">Quên mật khẩu?</div></a>
+						<input type="reset" name="#" id="huy1" onclick="exit(1)" value="HỦY BỎ">
+						<input type="button" name="#" value="ĐĂNG NHẬP" id="nut-dang-nhap" onclick="ktdn()">
+						<!--
+						<div id="huy1" onclick="exit(1)">HỦY BỎ</div>
+						<div id="nut-dang-nhap" onclick="ktdn()">ĐĂNG NHẬP</div>-->
+					</form>
+				</div>
+			</div>
+
+			<!-- ============================================Khung đăng kí =========================================-->
+			<div id= "signup" onclick="exit(2)">
+				<div id = "khung-signup">
+					<div id="khung-signup_dki_dn">
+						<button type="button" name="#" id="khung-signup_dn" onClick="show_Login()">Đăng nhập</button>
+						<button type="button" name="#" id="khung-signup_dki">Đăng kí</button>
+					</div>
+					<form id="signup-form" name="dang-ki" method="post" action="xuly.php" enctype="multipart/form-data">
+						<table>
+							<tr>
+								<label class="truong">Tên đăng nhập: </label>
+								<input type="dki-taikhoan" name="text" class="input-dki" id = "dki-user">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich1"></span></tr>
+							<tr>
+								<label class="truong">Mật khẩu: </label>
+								<input type="password" name="dki-password" class="input-dki"  id="dki-pass">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich2"></span></tr>
+							<tr>
+								<label class="truong">Nhập lại mật khẩu: </label>
+								<input type="password" name="dki-nhaplaipassword" class="input-dki" id="re-pass">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich3"></span></tr>
+							<tr>
+								<label class="truong">Họ và tên: </label>
+								<input type="text" name="ho-ten" class="input-dki" id="dki-name">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich4"></span></tr>
+							<tr>
+								<label class="truong">Giới tính: </label>
+								<div id="dki_sex">
+									<label><input type="radio" name="sex" id="dki_sex_nam" onclick="dki_muc_sex(1)">Nam</label> 
+									<label><input type="radio" name="sex" id="dki_sex_nu" onclick="dki_muc_sex(2)">Nữ</label> 
+								</div>
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich5"></span></tr>
+							<tr>
+								<label class="truong">Ngày sinh: </label>
+								<input type="date" name="ngay-sinh" class="input-dki" id="dki_born">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich6"></span></tr>
+							<tr>
+								<label class="truong">Số điện thoại: </label>
+								<input type="tell" name="numphone" class="input-dki"  id="dki-phone">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich7"></span></tr>
+							<tr>
+								<label class="truong">Thư điện tử: </label>
+								<input type="email" name="email" class="input-dki" id="dki-email">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich8"></span></tr>
+							<tr>
+								<label class="truong">Địa chỉ: </label>
+								<input type="text" name="dia-chi" class="input-dki" id="dki-address">
+							</tr>
+							<tr><span class="chuthich_dk" id="chuthich9"></span></tr>
+
+							<input type="reset" name="#" id="huy2" onclick="exit(2)" value="HỦY BỎ">
+							<input type="button" name="#" id = "nut-dang-ki" onclick="ktdk()" value="ĐĂNG KÍ">
+							<!--
+							<div id="huy2" onclick="exit(2)">HỦY BỎ</div>
+							<div id="nut-dang-ki" onclick="ktdk()">ĐĂNG KÍ</div> -->
+						</table>
+					</form>
+				</div>
+			</div>
+			<!--phần content-->
+			<div id="content">
+				<div id="admin_danh_muc">
+					<div class="quanly" onclick="admin_qlsp()"><div>Quản lý sản phẩm</div></div>
+					<div class="quanly" onclick="admin_qldh()"><div>Quản lý đơn hàng</div></div>
+					<div class="quanly" onclick="admin_qltk()"><div>Quản lý tài khoản</div></div>
+				</div>
+				<div id="admin_tieu_de">Quản lý sản phẩm</div>
+				<div id="admin_nd_can_sua">
+					<div id="admin_nd">
+						<!--============================Phần test quản lý sản phẩm==============================-->
+						<div id="admin_truong">
+							<div id="admin_truong_img">Hình ảnh</div>
+							<div id="admin_truong_name">Tên sản phẩm</div>
+							<div id="admin_truong_price">Giá</div>
+							<div id="admin_truong_id">Mã sản phẩm</div>
+						</div>
+						<div id="admin_nd_can_sua_1">
+							<div class="admin_sp">
+								<div class="admin_sp_img"><img src="image/sp0.jpg"></div>
+								<div class="admin_sp_name">Lustre Eyeshadow Base</div>
+								<div class="admin_sp_price">200000đ</div>
+								<div class="admin_sp_id">#0</div>
+							</div>
+							<div class="admin_sp">
+								<div class="admin_sp_img"><img src="image/sp0.jpg"></div>
+								<div class="admin_sp_name">Lustre Eyeshadow Base</div>
+								<div class="admin_sp_price">200000đ</div>
+								<div class="admin_sp_id">#0</div>
+							</div>
+							<div class="admin_sp">
+								<div class="admin_sp_img"><img src="image/sp0.jpg"></div>
+								<div class="admin_sp_name">Lustre Eyeshadow Base</div>
+								<div class="admin_sp_price">200000đ</div>
+								<div class="admin_sp_id">#0</div>
+							</div>
+							<div class="admin_sp">
+								<div class="admin_sp_img"><img src="image/sp0.jpg"></div>
+								<div class="admin_sp_name">Lustre Eyeshadow Base</div>
+								<div class="admin_sp_price">200000đ</div>
+								<div class="admin_sp_id">#0</div>
+							</div>
+						</div>
+						<div id="phan_trang_sp">
+							<div type="button" id="0" onclick="phantrang(0)"><</div>
+							<div type="button" id="1" onclick="phantrang(1)">1</div>
+							<div type="button" id="2" onclick="phantrang(2)">2</div>
+							<div type="button" id="3" onclick="phantrang(3)">3</div>
+							<div type="button" id="4" onclick="phantrang(4)">4</div>
+							<div type="button" id="5" onclick="phantrang(5)">5</div>
+							<div type="button" id="6" onclick="phantrang(6)">6</div>
+							<div type="button" id="7" onclick="phantrang(7)">7</div>
+							<div type="button" id="8" onclick="phantrang(8)">8</div>
+							<div type="button" id="9" onclick="phantrang(9)">9</div>
+							<div type="button" id="10" onclick="phantrang(10)">10</div>
+							<div type="button" id="11" onclick="phantrang(11)">11</div>
+							<div type="button" id="12" onclick="phantrang(12)">></div>
+						</div>	
+					</div>
+				</div>
+				<div id= "table_qlsp" onclick="exit(3)">
+					<div id = "khung_qlsp">
+						<div id="khung_qlsp_sanpham">
+							Sản phẩm
+						</div>
+						<form id="table_qlsp_form" name="dang-ki" method="post" action="xuly.php" enctype="multipart/form-data">
+							<table>
+								<tr>
+									<label class="khung_qlsp_truong">Mã sản phẩm: </label>
+									<div class="table_qlsp_input_id" id = "table_qlsp_input_id">1</div>
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthich_1"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Tên sản phẩm: </label>
+									<input type="text" class="table_qlsp_input_id"  id="name_sp">
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthich_2"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Giá: </label>
+									<input type="number" class="table_qlsp_input_id" id="price_sp" min="0" onkeyup="ap_kt_number_sp('price_sp')" value="0">
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthich_3"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Loại: </label>
+									<select id="table_qlsp_loai_3">
+										<option value="Lót mắt">Lót mắt</option>
+										<option value="Phấn mắt">Phấn mắt</option>
+										<option value="Chuốt mi">Chuốt mi</option>
+										<option value="Kẻ mắt">Kẻ mắt</option>
+										<option value="Chân mày">Chân mày</option>
+										<option value="Tẩy trang mắt">Tẩy trang mắt</option>
+									</select>
+									<select id="table_qlsp_loai_2" onchange="onchangetype3()">
+										<option value="Mắt">Mắt</option>
+										<option value="Mặt">Mặt</option>
+										<option value="Môi">Môi</option>
+									</select>
+									<select id="table_qlsp_loai_1" onchange="onchangetype2()">
+										<option value="Trang điểm">Trang điểm</option>
+										<option value="Dưỡng da">Dưỡng da</option>
+										<option value="Cơ thể">Cơ thể</option>
+										<option value="Tóc">Tóc</option>
+										<option value="Cọ & Phụ kiện">Cọ & Phụ kiện</option>
+										<option value="Nước hoa">Nước hoa</option>
+									</select>
+									
+									
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthich_4"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Nhãn hiệu: </label>
+									<select type="text" name="ho-ten" id="nhan_hieu">
+										<option value="LUSTRE MAKEUP">LUSTRE MAKEUP</option>
+										<option value="Golden Rose">Golden Rose</option>
+										<option value="Smashbox">Smashbox</option>
+										<option value="Medium">Medium</option>
+										<option value="BH Cosmetics">BH Cosmetics</option>
+										<option value="M.A.C Cosmetics">M.A.C Cosmetics</option>
+										<option value="Missha">Missha</option>
+										<option value="Innisfree">Innisfree</option>
+										<option value="Sisley Paris">Sisley Paris</option>
+										<option value="ARCANCIL PARIS">ARCANCIL PARIS</option>
+										<option value="Buxom Cosmetics">Buxom Cosmetics</option>
+										<option value="Isehan">Isehan</option>
+										<option value="Dior">Dior</option>
+										<option value="MacQueen">MacQueen</option>
+										<option value="Eclipse Colours">Eclipse Colours</option>
+										<option value="PETITE LAEL">PETITE LAEL</option>
+										<option value="THE BROWGAL">THE BROWGAL</option>
+										<option value="Dolly Wink">Dolly Wink</option>
+										<option value="Muji">Muji</option>
+										<option value="United States">United States</option>
+										<option value="Milk">Milk</option>
+										<option value="Laneige">Laneige</option>
+										<option value="Guerlain">Guerlain</option>
+										<option value="Elizabeth Arden">Elizabeth Arden</option>
+										<option value="L’oreal">L’oreal</option>
+										<option value="Eglips">Eglips</option>
+										<option value="SILKYGIRL">SILKYGIRL</option>
+										<option value="STATISFY">STATISFY</option>
+										<option value="Aritaum">Aritaum</option>
+										<option value="3CE">3CE</option>
+										<option value="Kaleido Cosmetics">Kaleido Cosmetics</option>
+										<option value="Stila Cosmetics">Stila Cosmetics</option>
+										<option value="Cover Fx">Cover Fx</option>
+										<option value="Anastasia Beverly Hills">Anastasia Beverly Hills</option>
+										<option value="e.l.f">e.l.f</option>
+										<option value="Yves Saint Laurent">Yves Saint Laurent</option>
+										<option value="Nars">Nars</option>
+										<option value="Lime Crime">Lime Crime</option>
+										<option value="Tarte">Tarte</option>
+										<option value="Zelens">Zelens</option>
+										<option value="OKAME Skincare">OKAME Skincare</option>
+										<option value="Byphasse">Byphasse</option>
+										<option value="Clinique">Clinique</option>
+										<option value="Bioderma">Bioderma</option>
+										<option value="DHC">DHC</option>
+										<option value="Mad Hippie">Mad Hippie</option>
+										<option value="Huxley">Huxley</option>
+										<option value="Simple">Simple</option>
+										<option value="Slinky Touch">Slinky Touch</option>
+										<option value="Shiro Waki Hime">Shiro Waki Hime</option>
+										<option value="Pixi by Petra">Pixi by Petra</option>
+										<option value="Fresh">Fresh</option>
+										<option value="Peter Thomas Roth">Peter Thomas Roth</option>
+										<option value="Indie Lee">Indie Lee</option>
+										<option value="Some By Mi">Some By Mi</option>
+										<option value="Mario Badescu">Mario Badescu</option>
+										<option value="ELTA MD Skin Care">ELTA MD Skin Care</option>
+										<option value="Drunk Elephant">Drunk Elephant</option>
+										<option value="Naruko">Naruko</option>
+										<option value="Paula's Choice">Paula's Choice</option>
+										<option value="Cosrx">Cosrx</option>
+										<option value="Pixi by Petra">Pixi by Petra</option>
+										<option value="Fresh">Fresh</option>
+										<option value="Peter Thomas Roth">Peter Thomas Roth</option>
+										<option value="Indie Lee">Indie Lee</option>
+										<option value="Some By Mi">Some By Mi</option>
+										<option value="Dermedic">Dermedic</option>
+										<option value="Sunday Riley">Sunday Riley</option>
+										<option value="Clinique">Clinique</option>
+										<option value="Oribe">Oribe</option>
+										<option value="Dr. Dennis Gross Skincare">Dr. Dennis Gross Skincare</option>
+										<option value="Murad">Murad</option>
+										<option value="Neutrogena">Neutrogena</option>
+										<option value="Radha Beauty">Radha Beauty</option>
+										<option value="Mad Hippie">Mad Hippie</option>
+										<option value="Balance Active Formula">Balance Active Formula</option>
+										<option value="Innisfree">Innisfree</option>
+										<option value="ELEMIS">ELEMIS</option>
+										<option value="So Natural">So Natural</option>
+										<option value="Epionce">Epionce</option>
+										<option value="Timeless">Timeless</option>
+										<option value="ALPHA SKINCARE">ALPHA SKINCARE</option>
+										<option value="Molton Brown">Molton Brown</option>
+										<option value="NATURAL WORLD">NATURAL WORLD</option>
+										<option value="Sachajuan">Sachajuan</option>
+										<option value="Morphe">Morphe</option>
+										<option value="Lixibox">Lixibox</option>
+										<option value="Chikuhodo">Chikuhodo</option>
+										<option value="Jo Malone London">Jo Malone London</option>
+										<option value="Diptyque">Diptyque</option>
+										<option value="LE LABO">LE LABO</option>
+										<option value="Atelier Cologne">Atelier Cologne</option>
+										
+									</select>
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthich_5"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Số lượng: </label>
+									<input type="number" name="ngay-sinh" class="table_qlsp_input_id" id="so_luong" onkeyup="ap_kt_number_sp('so_luong')" value="0">
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthich_6"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Thông tin: </label>
+									<input type="text" name="numphone" class="table_qlsp_input_id"  id="infomation">
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthich_7"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Cách sử dụng: </label>
+									<input type="email" name="email" class="table_qlsp_input_id" id="use">
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthich_8"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Hình ảnh: </label>
+									<input type="file" name="dia-chi" id="hinh_anh">
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthich_9"></span></tr>
+
+								<input type="reset" name="#" id="huy3" onclick="exit(3)" value="HỦY BỎ"/>
+								<input type="button" id = "nut_xoa_sp" onclick="nutxoasp()" value="XÓA"/>
+								<input type="button" id = "nut_sua_sp" onclick="nutsuasp()" value="SỬA"/>
+							</table>
+						</form>
+					</div>
+				</div>
+				<div id= "table_qltk" onclick="exit(4)">
+					<div id = "khung_qltk">
+						<div id="khung_qltk_tk">
+							TÀI KHOẢN
+						</div>
+						<form id="qltk_form" name="dang-ki" method="post" action="xuly.php" enctype="multipart/form-data">
+							<table>
+								<tr>
+									<label class="khung_qlsp_truong">Tên đăng nhập: </label>
+									<div class="table_qlsp_input_id" id = "table_qltk_user">1</div>
+								</tr>
+								<tr><span class="chuthich_dk" id="chuthich1"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Mật khẩu: </label>
+									<input type="text" name="dki-password" class="table_qlsp_input_id"  id="table_qltk_pass">
+								</tr>
+								<tr><span class="chuthich_dk" id="chuthich2"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Họ và tên: </label>
+									<input type="text" name="ho-ten" class="table_qlsp_input_id" id="table_qltk_name">
+								</tr>
+								<tr><span class="chuthich_dk" id="chuthich3"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Giới tính: </label>
+									<select type="text" name="ho-ten" id="table_qltk_sex">
+										<option value="NAM">NAM</option>
+										<option value="NỮ">NỮ</option>
+									</select>
+								</tr>
+								<tr><span class="chuthich_dk" id="chuthich4"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Ngày sinh: </label>
+									<input type="date" name="ngay-sinh" class="table_qlsp_input_id" id="table_qltk_born">
+								</tr>
+								<tr><span class="chuthich_dk" id="chuthich5"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Số điện thoại: </label>
+									<input type="tell" name="numphone" class="table_qlsp_input_id"  id="table_qltk_phone">
+								</tr>
+								<tr><span class="chuthich_dk" id="chuthich6"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Thư điện tử: </label>
+									<input type="email" name="email" class="table_qlsp_input_id" id="table_qltk_email">
+								</tr>
+								<tr><span class="chuthich_dk" id="chuthich7"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Địa chỉ: </label>
+									<input type="text" name="dia-chi" class="table_qlsp_input_id" id="table_qltk_address">
+								</tr>
+								<tr><span class="chuthich_dk" id="chuthich8"></span></tr>
+
+								<input type="reset" name="#" id="huy4" onclick="exit(4)" value="HỦY BỎ">
+								<input type="button" id = "nut_xoa_tk" onclick="nutxoatk()" value="XÓA"/>
+								<input type="button" name="#" id = "table_qltk_nutsua" onclick="table_qltk_nutsua()" value="SỬA">
+								<!--
+								<div id="huy2" onclick="exit(2)">HỦY BỎ</div>
+								<div id="nut-dang-ki" onclick="ktdk()">ĐĂNG KÍ</div> -->
+							</table>
+						</form>
+					</div>
+				</div>
+				<div id= "table_qlsp_add" onclick="exit(5)">
+					<div id = "khung_qlsp_add">
+						<div id="khung_qlsp_add_sanpham">
+							Thêm sản phẩm
+						</div>
+						<form id="table_qlsp_add_form" name="dang-ki" method="post" action="xuly.php" enctype="multipart/form-data">
+							<table>
+								<tr>
+									<label class="khung_qlsp_truong">Mã sản phẩm: </label>
+									<input type="text" class="table_qlsp_input_id" id = "table_qlsp_add_id">
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthichadd_1"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Tên sản phẩm: </label>
+									<input type="text" class="table_qlsp_input_id"  id="name_sp_add">
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthichadd_2"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Giá: </label>
+									<input type="number" class="table_qlsp_input_id" id="price_sp_add" min="0" onkeyup="ap_kt_number_sp('price_sp_add')" value="0">
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthichadd_3"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Loại: </label>
+									<select id="table_qlsp_add_loai_3">
+										<option value="Lót mắt">Lót mắt</option>
+										<option value="Phấn mắt">Phấn mắt</option>
+										<option value="Chuốt mi">Chuốt mi</option>
+										<option value="Kẻ mắt">Kẻ mắt</option>
+										<option value="Chân mày">Chân mày</option>
+										<option value="Tẩy trang mắt">Tẩy trang mắt</option>
+									</select>
+									<select id="table_qlsp_add_loai_2" onchange="onchangeaddtype3()">
+										<option value="Mắt">Mắt</option>
+										<option value="Mặt">Mặt</option>
+										<option value="Môi">Môi</option>
+									</select>
+									<select id="table_qlsp_add_loai_1" onchange="onchangeaddtype2()">
+										<option value="Trang điểm">Trang điểm</option>
+										<option value="Dưỡng da">Dưỡng da</option>
+										<option value="Cơ thể">Cơ thể</option>
+										<option value="Tóc">Tóc</option>
+										<option value="Cọ & Phụ kiện">Cọ & Phụ kiện</option>
+										<option value="Nước hoa">Nước hoa</option>
+									</select>
+									
+									
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthichadd_4"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Nhãn hiệu: </label>
+									<select type="text" name="ho-ten" id="nhan_hieu_add">
+										<option value="LUSTRE MAKEUP">LUSTRE MAKEUP</option>
+										<option value="Golden Rose">Golden Rose</option>
+										<option value="Smashbox">Smashbox</option>
+										<option value="Medium">Medium</option>
+										<option value="BH Cosmetics">BH Cosmetics</option>
+										<option value="M.A.C Cosmetics">M.A.C Cosmetics</option>
+										<option value="Missha">Missha</option>
+										<option value="Innisfree">Innisfree</option>
+										<option value="Sisley Paris">Sisley Paris</option>
+										<option value="ARCANCIL PARIS">ARCANCIL PARIS</option>
+										<option value="Buxom Cosmetics">Buxom Cosmetics</option>
+										<option value="Isehan">Isehan</option>
+										<option value="Dior">Dior</option>
+										<option value="MacQueen">MacQueen</option>
+										<option value="Eclipse Colours">Eclipse Colours</option>
+										<option value="PETITE LAEL">PETITE LAEL</option>
+										<option value="THE BROWGAL">THE BROWGAL</option>
+										<option value="Dolly Wink">Dolly Wink</option>
+										<option value="Muji">Muji</option>
+										<option value="United States">United States</option>
+										<option value="Milk">Milk</option>
+										<option value="Laneige">Laneige</option>
+										<option value="Guerlain">Guerlain</option>
+										<option value="Elizabeth Arden">Elizabeth Arden</option>
+										<option value="L’oreal">L’oreal</option>
+										<option value="Eglips">Eglips</option>
+										<option value="SILKYGIRL">SILKYGIRL</option>
+										<option value="STATISFY">STATISFY</option>
+										<option value="Aritaum">Aritaum</option>
+										<option value="3CE">3CE</option>
+										<option value="Kaleido Cosmetics">Kaleido Cosmetics</option>
+										<option value="Stila Cosmetics">Stila Cosmetics</option>
+										<option value="Cover Fx">Cover Fx</option>
+										<option value="Anastasia Beverly Hills">Anastasia Beverly Hills</option>
+										<option value="e.l.f">e.l.f</option>
+										<option value="Yves Saint Laurent">Yves Saint Laurent</option>
+										<option value="Nars">Nars</option>
+										<option value="Lime Crime">Lime Crime</option>
+										<option value="Tarte">Tarte</option>
+										<option value="Zelens">Zelens</option>
+										<option value="OKAME Skincare">OKAME Skincare</option>
+										<option value="Byphasse">Byphasse</option>
+										<option value="Clinique">Clinique</option>
+										<option value="Bioderma">Bioderma</option>
+										<option value="DHC">DHC</option>
+										<option value="Mad Hippie">Mad Hippie</option>
+										<option value="Huxley">Huxley</option>
+										<option value="Simple">Simple</option>
+										<option value="Slinky Touch">Slinky Touch</option>
+										<option value="Shiro Waki Hime">Shiro Waki Hime</option>
+										<option value="Pixi by Petra">Pixi by Petra</option>
+										<option value="Fresh">Fresh</option>
+										<option value="Peter Thomas Roth">Peter Thomas Roth</option>
+										<option value="Indie Lee">Indie Lee</option>
+										<option value="Some By Mi">Some By Mi</option>
+										<option value="Mario Badescu">Mario Badescu</option>
+										<option value="ELTA MD Skin Care">ELTA MD Skin Care</option>
+										<option value="Drunk Elephant">Drunk Elephant</option>
+										<option value="Naruko">Naruko</option>
+										<option value="Paula's Choice">Paula's Choice</option>
+										<option value="Cosrx">Cosrx</option>
+										<option value="Pixi by Petra">Pixi by Petra</option>
+										<option value="Fresh">Fresh</option>
+										<option value="Peter Thomas Roth">Peter Thomas Roth</option>
+										<option value="Indie Lee">Indie Lee</option>
+										<option value="Some By Mi">Some By Mi</option>
+										<option value="Dermedic">Dermedic</option>
+										<option value="Sunday Riley">Sunday Riley</option>
+										<option value="Clinique">Clinique</option>
+										<option value="Oribe">Oribe</option>
+										<option value="Dr. Dennis Gross Skincare">Dr. Dennis Gross Skincare</option>
+										<option value="Murad">Murad</option>
+										<option value="Neutrogena">Neutrogena</option>
+										<option value="Radha Beauty">Radha Beauty</option>
+										<option value="Mad Hippie">Mad Hippie</option>
+										<option value="Balance Active Formula">Balance Active Formula</option>
+										<option value="Innisfree">Innisfree</option>
+										<option value="ELEMIS">ELEMIS</option>
+										<option value="So Natural">So Natural</option>
+										<option value="Epionce">Epionce</option>
+										<option value="Timeless">Timeless</option>
+										<option value="ALPHA SKINCARE">ALPHA SKINCARE</option>
+										<option value="Molton Brown">Molton Brown</option>
+										<option value="NATURAL WORLD">NATURAL WORLD</option>
+										<option value="Sachajuan">Sachajuan</option>
+										<option value="Morphe">Morphe</option>
+										<option value="Lixibox">Lixibox</option>
+										<option value="Chikuhodo">Chikuhodo</option>
+										<option value="Jo Malone London">Jo Malone London</option>
+										<option value="Diptyque">Diptyque</option>
+										<option value="LE LABO">LE LABO</option>
+										<option value="Atelier Cologne">Atelier Cologne</option>
+										
+									</select>
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthichadd_5"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Số lượng: </label>
+									<input type="number" name="ngay-sinh" class="table_qlsp_input_id" id="so_luong_add" onkeyup="ap_kt_number_sp('so_luong_add')" value="0">
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthichadd_6"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Thông tin: </label>
+									<input type="text" name="numphone" class="table_qlsp_input_id"  id="infomationadd">
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthichadd_7"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Cách sử dụng: </label>
+									<input type="email" name="email" class="table_qlsp_input_id" id="use_add">
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthichadd_8"></span></tr>
+								<tr>
+									<label class="khung_qlsp_truong">Hình ảnh: </label>
+									<input type="file" name="dia-chi" id="hinh_anh_add">
+								</tr>
+								<tr><span class="admin_chuthich_dk" id="chuthichadd_9"></span></tr>
+
+								<input type="reset" name="#" id="huy5" onclick="exit(5)" value="HỦY BỎ"/>
+								<input type="button" id = "nut_add_sp" onclick="nutaddsp()" value="THÊM"/>
+							</table>
+						</form>
+					</div>
+				</div>
+
+				
+			</div>
+		</div>
+		<div id="index_footer">
+			<div id="index_footer_SATISFY">
+				<div id="index_footer_SATISFY_name"><a href="index.html">SATISFY</a></div>
+				<span>www.satisty.com là kênh mua sắm mỹ phẩm, làm đẹp hàng đầu Việt Nam được các beauty blogger lựa chọn để giới thiệu sản phẩm họ yêu thích tới khách hàng, người hâm mộ.</span>
+			</div>
+			<div class="index_footer_danhmuc">
+				<div class="index_footer_danhmuc_ds">Danh mục Sản phẩm</div>
+				<div><span onclick="chuyentrangsangsp('Trang điểm')">Trang điểm</span></div><br>
+				<div><span onclick="chuyentrangsangsp('Tóc')">Tóc</span></div><br>
+				<div><span onclick="chuyentrangsangsp('Dưỡng da')">Dưỡng da</span></div><br>
+				<div><span onclick="chuyentrangsangsp('Cơ thể')">Cơ thể</span></div><br>
+				<div><span onclick="chuyentrangsangsp('Cọ & Phụ kiện')">Cọ & Phụ kiện</span></div><br>
+				<div><span onclick="chuyentrangsangsp('Nước hoa')">Nước hoa</span></div>
+			</div>
+			<div class="index_footer_danhmuc">
+				<div class="index_footer_danhmuc_ds">Thông tin & Hướng dẫn</div>
+				<div>Về SATISFY</div><br>
+				<div>SATISFY Magazine</div><br>
+				<div>SATISFY Community</div><br>
+				<div>SATISFY Coin</div><br>
+				<div>SATISFY Store</div><br>
+				<div>Chính sách và bảo mật</div>
+			</div>
+		</div>
+ 	</body>
+</html>
